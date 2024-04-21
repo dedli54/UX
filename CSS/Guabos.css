@@ -40,18 +40,23 @@ body {
 header {
     /* position: relative; */
     z-index: 2;
-
+    
     width: 100%;
-    height: 290px;
-    background: #070001;
+    height: 300px;
+    background: #c5b198;
     text-align: center;
     position: fixed;
     top: 0;
     overflow: hidden;
     transition: all 0.5s ease;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    
+
 }
+
+/*Color de las letras*/
+
+/*body{color: red;}*/
+
 
 header .Presentacion {
     display: flex;
@@ -80,26 +85,43 @@ header .Presentacion ul li {
     transition: all 0.3s ease;
 }
 
+
 header .Presentacion ul ._3 {
-    color: #F6D109;
+    /*Fries*/
+    color: #36a264;
 }
 
 header .Presentacion ul ._5 {
-    color: #F25826;
+    /*Guabitos*/
+    color: #1d5635;
 }
 
-header .Presentacion #Logo_G {
-    width: 230px;
-    height: 230px;
-    margin: 0;
-    padding: 0;
+
+.Logo_G_Wrapper 
+{
+    /*center the image vertically*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;        
 }
 
+#Logo_G {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    padding: 16px;
+    margin-bottom: 65px;
+}
+
+
+
+/*Where it says login*/
 header #opciones {
     height: 30px;
     line-height: 30px;
     width: 100%;
-    background: #F25826;
+    background: #1d5635;
     top: 0;
     right: 0;
     text-align: end;
@@ -134,7 +156,8 @@ header #opciones .RegresarInicio:hover {
 }
 
 header #opciones .RegresarInicio #Logo_p {
-    width: 30px;
+    /*Cerro de la silla*/
+    width: 150px;
     height: 30px;
 }
 
@@ -151,7 +174,7 @@ header .Menu {
     height: 60px;
     line-height: 60px;
     width: 100%;
-    background: #F6D109;
+    background: #36a264;
     justify-content: space-between;
 }
 
@@ -161,7 +184,7 @@ header nav {
     height: 60px;
     line-height: 60px;
     width: 100%;
-    background: #F6D109;
+    background: #36a264;
 }
 
 header #menu nav ul {
@@ -186,7 +209,8 @@ header nav a {
 }
 
 header nav a:hover {
-    background: #F6AC3E;
+    /*When you hover the mouse on the words taco, bebida, etc*/
+    background: #c5b198 ;
 }
 
 .wrapper {
@@ -221,11 +245,11 @@ section[id] {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background: #F25826;
+    background: #1d5635;
     border-radius: 10px;
 }
 .contenedor_producto:hover {
-    background: #F25826;
+    background: #1d5635;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     cursor: pointer;
 }
@@ -582,8 +606,10 @@ body.sticky-header {
 }
 
 body.sticky-header header {
+    /*Color of the background when its transitioning*/
+    
     height: 60px;
-    background: #F6D109;
+    background: #36a264;
 }
 
 body.sticky-header header .Presentacion {

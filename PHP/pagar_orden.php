@@ -22,7 +22,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
 
 <head>
     <meta charset="UTF-8">
-    <title>Guabos | Carrito</title>
+    <title>Taqueria Juarez | Carrito</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">

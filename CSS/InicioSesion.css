@@ -51,14 +51,14 @@ header #opciones {
     height: 30px;
     line-height: 30px;
     width: 100%;
-    background: #F25826;
+    background: #1d5635;
     top: 0;
     right: 0;
     text-align: end;
 }
 
 header #opciones a {
-    font-weight: bolder;
+    font-weight: lighter;
     color: #070001;
     display: inline-block;
     padding: 5px 10px;
@@ -84,7 +84,8 @@ header #opciones .RegresarInicio:hover {
     background:none;
 }
 header #opciones .RegresarInicio #Logo_p {
-    width: 30px;
+    /*Cerro de la silla*/
+    width: 150px;
     height: 30px;
 }
 
@@ -95,7 +96,7 @@ header #opciones .RegresarInicio #Logo_p {
     width: 100%;
 }
  .form-box {
-    background: linear-gradient(to bottom right, #F6AC3E,#F25826,#c22929);
+    background: linear-gradient(to bottom right, #42c87a,#297c4c,#1d5635);
     border: 1px solid white;
     border-radius: 5px;
     padding: 40px;

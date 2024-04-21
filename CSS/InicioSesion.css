@@ -132,7 +132,7 @@ header #opciones .RegresarInicio #Logo_p {
   }
   
   button[type="submit"] {
-    background: #F6AC3E;
+    background: #070001;
     border: 0;
     border-radius: 12px;
     color: #FFFFFF;

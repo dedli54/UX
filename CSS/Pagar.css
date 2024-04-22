@@ -203,8 +203,8 @@ input[type="radio"] {
 }
 
 .form-check-input:checked {
-    background-color: #F6AC3E;
-    border-color: #F6AC3E;
+    background-color: black;
+    border-color: black;
 }
 
 .ListaItems{
@@ -249,7 +249,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 255, 60, 0.5), .125rem .125rem 1rem rgba(94, 239, 4, 0.5);
 }
 
 /* Añade un poco de espacio entre los elementos para mayor claridad */

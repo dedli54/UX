@@ -128,7 +128,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
         </div>
     </div>
 
-    <footer>
+<footer>
     <div class="footer_container">
         <div class="footer_box">
             <div class="logo">

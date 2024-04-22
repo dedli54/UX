@@ -31,7 +31,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
 <body>
     <header>
         <nav id="opciones">
-            <a href="dashboard.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/Guabos_logo.png"
+            <a href="dashboard.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>
             <a><?php echo $nombre; ?></a>
         </nav>
@@ -129,43 +129,41 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
     </div>
 
     <footer>
-        <div class="footer_container">
-            <div class="footer_box">
-                <div class="logo">
-                    <h1>GUABOS</h1>
-                    <!-- <img src="../Imagenes/Guabos_logo.png" alt="logo" > -->
-                </div>
-                <div class="terminos">
-                    <p>Tu servicio de comida artesanal más confiable. ¡AHORA TENEMOS SERVICIOS! No te quedes con Hamburguesas
-                        ¡¡¡¡¡EN LINEA PIDE YA!!!! </p>
-                </div>
+    <div class="footer_container">
+        <div class="footer_box">
+            <div class="logo">
+                <h1> Taquería Juárez </h1>
             </div>
-
-            <div class="footer_box">
-                <h3>Encuentranos en:</h3>
-                <a id="_1" href="https://www.facebook.com/Guabos">Facebook</a>
-                <a id="_2" href="https://www.ubereats.com/mx/store/guabos-foodtruck/fWOPdl9RS5GVWdxcUWDfQw">UberEats</a>
-                <a id="_3"
-                    href="https://www.didi-food.com/es-MX/food/store/5764607692065472592/Guabos-Foodtruck/">DiDiFood
-                </a>
-                <a id="_4" href="https://www.rappi.com.mx/restaurantes/1923218098-guabos-foodtruck">Rappi </a>
+            <div class="terminos">
+                <p>Empleamos para su preparación, ingredientes frescos dignos de deleitar el paladar de toda la familia, por ello también contamos con instalaciones que le harán sentir tan cómodo como si estuviera en casa.</p>
             </div>
-
-            <div class="footer_box">
-                <h3>Dirección:</h3>
-                <p>Estardo Guajardo #408 66604 <br>Apodaca, Nuevo León, México</p>
-                <br>
-                <h3>Teléfono:</h3>
-                <p>81-1280-2457</p>
-            </div>
-
-            <div class="box__copyright">
-                <hr>
-                <p>Todos los derechos reservados © 2023 <b>GUABOS</b></p>
-            </div>
-
         </div>
-    </footer>
+
+        <div class="footer_box">
+            <h3>Encuentranos en:</h3>
+            <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
+            <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
+            <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>          
+        </div>
+
+        <div class="footer_box">
+            <h3>Direccion:</h3>
+            <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
+            <br>
+            <h3>Telefono:</h3>
+            <p>81-8340-1956</p>
+
+            <h3>Correo:</h3>
+            <p>taqueria-juarez@prodigy.net.mx</p>
+        </div>
+        
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2024 <b>Taquería Juárez </b></p>
+        </div>
+
+    </div>
+</footer>
 
     <script>
             // Función para mostrar u ocultar el div según el tipo de orden seleccionado

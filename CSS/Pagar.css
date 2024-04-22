@@ -51,7 +51,7 @@ header #opciones {
     height: 30px;
     line-height: 30px;
     width: 100%;
-    background: #F25826;
+    background: #1d5635;
     top: 0;
     right: 0;
     text-align: end;
@@ -84,7 +84,7 @@ header #opciones .RegresarInicio:hover {
     background:none;
 }
 header #opciones .RegresarInicio #Logo_p {
-    width: 30px;
+    width: 150px;
     height: 30px;
 }
 /*Seccion compra*/
@@ -157,7 +157,7 @@ header #opciones .RegresarInicio #Logo_p {
 }
 
 .form-box {
-    background: linear-gradient(to bottom right, #F6AC3E,#F25826,#c22929);
+    background: linear-gradient(to bottom right, #42c87a,#297c4c,#1d5635);
     padding: 20px;
     border: 1px solid white;
     border-radius: 10px;
@@ -241,7 +241,7 @@ input[type="radio"] {
 button {
     width: 100%;
     padding: 10px;
-    background: #F6AC3E;
+    background: #070001;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -282,7 +282,7 @@ footer {
 }
 
 footer h1,footer h3{
-    color:#F6AC3E;
+    color:#36a264;
 } 
 
 .footer_container {

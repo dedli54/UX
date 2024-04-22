@@ -95,7 +95,7 @@ header #opciones .RegresarInicio #Logo_p {
     width: 100%;
 }
 .form-box {
-    background: linear-gradient(to bottom right, #F6AC3E,#F25826,#c22929); // background-color: #F6D109;
+    background: linear-gradient(to bottom right, #F6AC3E,#F25826,#c22929); // background-color: #36a264;
     border: 1px solid white;
     border-radius: 5px;
     padding: 40px;
@@ -352,14 +352,14 @@ footer h1,footer h3{
 
 .box__copyright p {
     margin-top: 20px;
-    color: #F6D109;
+    color: #36a264;
 }
 
 .box__copyright hr {
     border: none;
     height: 1px;
     width: 1000px;
-    background-color: #F6D109;
+    background-color: #36a264;
 }
 
 /* Estilos responsivos */

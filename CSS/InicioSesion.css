@@ -175,7 +175,7 @@ footer {
 }
 
 footer h1,footer h3{
-    color:#F6D109;
+    color:#36a264;
 } 
 
 .footer_container {
@@ -245,14 +245,14 @@ footer h1,footer h3{
 
 .box__copyright p {
     margin-top: 20px;
-    color: #F6D109;
+    color: #36a264;
 }
 
 .box__copyright hr {
     border: none;
     height: 1px;
     width: 1000px;
-    background-color: #F6D109;
+    background-color: #36a264;
 }
 
 /* Estilos responsivos */

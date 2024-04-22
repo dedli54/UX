@@ -29,6 +29,7 @@
 }
 
 body {
+    
     background: #eee;
     margin: 0;
     padding-top: 330px;
@@ -40,7 +41,7 @@ body {
 header {
     /* position: relative; */
     z-index: 2;
-    
+    color: #212529;
     width: 100%;
     height: 300px;
     background: #c5b198;
@@ -55,7 +56,7 @@ header {
 
 /*Color de las letras*/
 
-/*body{color: red;}*/
+/*body{color: #eee;}*/
 
 
 header .Presentacion {
@@ -85,15 +86,34 @@ header .Presentacion ul li {
     transition: all 0.3s ease;
 }
 
+header .Presentacion ul ._1 {
+    /*tacos*/
+    color: #212529;
+}
+
+header .Presentacion ul ._2 {
+    /*enchiladas*/
+    color: #212529;
+}
 
 header .Presentacion ul ._3 {
-    /*Fries*/
+    /*flautas*/
     color: #36a264;
 }
 
+header .Presentacion ul ._4 {
+    /*sopas*/
+    color: #212529;
+}
+
 header .Presentacion ul ._5 {
-    /*Guabitos*/
+    /*sopes*/
     color: #1d5635;
+}
+
+header .Presentacion ul ._6 {
+    /*mas*/
+    color: #212529;
 }
 
 
@@ -138,7 +158,7 @@ header #opciones a {
 }
 
 header #opciones a:hover {
-    background: #F6AC3E;
+    background: #c5b198;
 }
 
 header #opciones .RegresarInicio {
@@ -169,6 +189,7 @@ header #opciones .RegresarInicio #Logo_p {
     height: 30px;
 } */
 header .Menu {
+    /**/
     position: absolute;
     bottom: 0;
     height: 60px;
@@ -185,6 +206,7 @@ header nav {
     line-height: 60px;
     width: 100%;
     background: #36a264;
+   
 }
 
 header #menu nav ul {
@@ -386,7 +408,7 @@ section[id] {
 }
 
 .modal__add{
-    background-color: #F6AC3E;
+    background-color: #36a264;
     margin-left: 20px;
 }
 
@@ -552,7 +574,7 @@ section[id] {
     padding: 0;
     width: 100%;
     height: 50px;
-    background-color: #F6AC3E;
+    background-color: #36a264;
     color: white;
 }
 

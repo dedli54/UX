@@ -7,8 +7,8 @@
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
-CREATE DATABASE guabosbd;
-USE guabosbd;
+CREATE DATABASE Juarez_BD;
+USE Juarez_BD;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `guabosbd`
+-- Base de datos: `Juarez_BD`
 --
 
 -- --------------------------------------------------------

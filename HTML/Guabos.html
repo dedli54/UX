@@ -24,7 +24,7 @@
 
         <nav id="opciones">
             <a href="../HTML/Guabos.html" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
-                    alt="logo" /></a>
+                    alt="logo" /></a>    <!--  NO SE VE COMO UN BOTON CAMBIAR PARA QUE SE VEA-->
             <a href="../HTML/InicioSesion.html">Iniciar Sesion</a>
             <a href="../HTML/Registro.html">Registrarse</a>
         </nav>
@@ -33,12 +33,10 @@
             <nav id="menu">
                 <ul>
                     <li><a href="#MasPopulares">Más Populares</a></li>
-                    <li><a href="#Hamburguesas">Hamburguesas</a></li>
-                    <li><a href="#Boneless">Boneless</a></li>
-                    <li><a href="#Alitas">Alitas</a></li>
                     <li><a href="#Entradas">Entradas</a></li>
-                    <!-- <li><a href="#Malteadas">Malteadas</a></li> -->
-                    <li><a href="#Bebidas">Bebidas</a></li>
+                    
+                   
+                
                 </ul>
             </nav>
         </div>
@@ -214,19 +212,17 @@
             </div>
 
             <div class="contenedor_seccion">
-                <section class="Hamburguesas" id="Hamburguesas">
-                    <h1>Hamburguesas</h1>
+                <section class="Entradas" id="Entradas">
+                    <h1>Entradas</h1>
 
                     <div class="contenedor_producto producto" data-item="4">
-                        <img class="imagen_producto" src="../Imagenes/La_Guabos.jpg" alt="La Guabos">
+                        <img class="imagen_producto" src="../Imagenes/Cueritos.jpeg" alt="Cueritos">
                         <div class="producto_info">
-                            <h2 class="producto_nombre">La Guabos</h2>
-                            <p class="descripcion_producto">Carne 100% res 180 gramos hecha en casa, salami,
-                                jamón, queso amarillo,
-                                y una alita en salsa guabos clavada sobre nuestro tradicional pan artesanal
+                            <h2 class="producto_nombre">Cueritos en Vinagre</h2>
+                            <p class="descripcion_producto">Deliciosa combinación de tiras finas de piel de cerdo encurtida.
                             </p>
                         </div>
-                        <p class="precio_producto">Precio: $70.00</p>
+                        <p class="precio_producto">Precio: $56.00</p>
                     </div>
                     <section class="modal modal-item" data-item="4">
                         <div class="modal__container">
@@ -237,26 +233,11 @@
                                 culpa tempora. Veniam consectetur deleniti maxime.</p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label>¿Desea papas?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="papas" value="sin_papas"> Sin papas ($0)</li>
-                                        <li><input type="radio" name="papas" value="con_papas"> Con papas ($48)</li>
-                                        <li><input type="radio" name="papas" value="con_papas_preparadas"> Con papas
-                                            preparadas ($30)</li>
-                                    </ol>
+                                    <label>¿Cuantas quiere agregar?</label>
+                                    
                                 </div>
 
-                                <div class="form-group">
-                                    <label>¿Desea bebida?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)
-                                        </li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)
-                                        </li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca cola sin-azucar ($48)</li>
-                                    </ol>
-                                </div>
+                                
                             </form>
 
                             <div id="resultado">

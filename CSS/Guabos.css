@@ -267,7 +267,7 @@ section[id] {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background: #1d5635;
+    background: #eeeeee;
     border-radius: 10px;
 }
 .contenedor_producto:hover {

@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/InicioSesion.css">
-    <title>Taqueria Juarez | Inicio de sesion</title>
+    <title>Taquer&iacute;a Juarez | Inicio de sesion</title>
 </head>
 <body>
     <header>
         <nav id="opciones">
             <a href="../HTML/Guabos.html" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>
-            <a href="../HTML/InicioSesion.html">Iniciar Sesion</a>
-            <a href="../HTML/Registro.html">Registrarse</a>
+            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
+            <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="form-box">
             <h2>Iniciar Sesion</h2>
-            <form action="#" method="POST">
+            <form action="../PHP/IniciarSesionTaqueria.php" method="POST">
                 <div class="form-group">
                     <label for="correo">Correo Electronico:</label>
                     <input type="text" id="correo" name="correo" required>

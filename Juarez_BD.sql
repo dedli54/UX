@@ -1,44 +1,21 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2023 a las 07:11:56
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
-
-CREATE DATABASE Juarez_BD;
-USE Juarez_BD;
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `Juarez_BD`
---
-
--- --------------------------------------------------------
+CREATE DATABASE taqueriajuarezdb;
+USE taqueriajuarezdb;
 
 --
 -- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `id_usuario` INT AUTO_INCREMENT PRIMARY KEY,
-  `nombre` varchar(255) NOT NULL,
-  `apellidos` varchar(255) NOT NULL,
-  `correo_electronico` varchar(255) NOT NULL,
-  `contrasena` varchar(255) NOT NULL,
-  `telefono` bigint(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-SELECT * FROM usuario;
+CREATE TABLE `taqueriajuarezdb`.`tablausuarios` (
+`id_usuario` INT NOT NULL AUTO_INCREMENT COMMENT 'ID AUTOMATICO DEL USUARIO' , 
+`nombres_usuario` VARCHAR(60) NOT NULL COMMENT 'NOMBRE O NOMBRES DEL USUARIO' , 
+`apellidos_usuario` VARCHAR(60) NOT NULL COMMENT 'APELLIDO O APELLIDOS DEL USUARIO' ,
+`correo_usuario` VARCHAR(60) NOT NULL COMMENT 'CORREO ELECTRONICO DEL USUARIO' , 
+`telefono_usuario` BIGINT NOT NULL COMMENT 'TELEFONO A 10 DIGITOS DEL USUARIO' , 
+`nacimiento_usuario` DATE NOT NULL COMMENT 'FECHA DE NACIMIENTO DEL USUARIO' , 
+`contrasena_usuario` VARCHAR(15) NOT NULL COMMENT 'CONTRASEÑA DEL USUARIO' , 
+PRIMARY KEY (`id_usuario`)) 
+ENGINE = InnoDB COMMENT = 'TABLA CON LOS USUARIOS REGISTRADOS A LA PAGINA DE TAQUERIA';
+SELECT * FROM tablausuarios;
 --
 -- Volcado de datos para la tabla `usuario`
 --

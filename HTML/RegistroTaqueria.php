@@ -14,15 +14,15 @@
         <nav id="opciones">
             <a href="../HTML/Guabos.html" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>
-            <a href="../HTML/InicioSesion.html">Iniciar Sesion</a>
-            <a href="../HTML/Registro.html">Registrarse</a>
+            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
+            <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="form-box">
             <h2>Registrarse</h2>
-            <form action="../JS/alta_usuario.js" method="POST">
+            <form action="../PHP/CapturaUsuarioTaqueria.php" method="POST">
                 <div class="form-group">
                     <label for="nombres">Nombres:</label>
                     <input type="text" id="nombres" name="nombres" required>

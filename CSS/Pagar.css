@@ -58,7 +58,7 @@ header #opciones {
 }
 
 header #opciones a {
-    font-weight: bolder;
+    font-weight: lighter;
     color: #070001;
     display: inline-block;
     padding: 5px 10px;
@@ -68,7 +68,7 @@ header #opciones a {
 }
 
 header #opciones a:hover {
-    background: #F6AC3E;
+    background: #c5b198;
 }
 
 header #opciones .RegresarInicio {

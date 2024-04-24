@@ -161,6 +161,23 @@ header #opciones a:hover {
     background: #c5b198;
 }
 
+header #opciones input
+{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #070001;
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #1d5635;
+}
+header #opciones input:hover {
+    background: #c5b198;
+}
+
 header #opciones .RegresarInicio {
     height: 30px;
     float: left;

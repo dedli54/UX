@@ -11,9 +11,10 @@
 </head>
 <body>
     <header>
-        <nav id="opciones">
         
-        <input type="button" value="Regresar" onclick="history.go(-1)" style="background-color: #1d5635; color: black; border-radius: 5px;" onmouseover="this.style.backgroundColor='#c5b198'" onmouseout="this.style.backgroundColor='#1d5635'">
+    <nav id="opciones">
+    <input type="button" value="Regresar" onclick="history.go(-1)" style="background-color: #1d5635; color: black; border-radius: 5px; padding-left: 10px; padding-right: 10px;" onmouseover="this.style.backgroundColor='#c5b198'" onmouseout="this.style.backgroundColor='#1d5635'">
+ 
 <!-- Esta linea de arriba es un boton que podemos usar para regresar a la paigna anterior-->
         <a class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                    alt="logo" /></a>

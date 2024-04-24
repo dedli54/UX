@@ -67,9 +67,28 @@ header #opciones a {
     border-radius: 5px;
 }
 
+
 header #opciones a:hover {
-    background: #F6AC3E;
+    background: #c5b198;
 }
+
+header #opciones input
+{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #070001;
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #1d5635;
+}
+header #opciones input:hover {
+    background: #c5b198;
+}
+
 
 header #opciones .RegresarInicio {
     height: 30px;
@@ -158,7 +177,7 @@ header #opciones .RegresarInicio #Logo_p {
   }
 
   button:hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 255, 60, 0.5), .125rem .125rem 1rem rgba(94, 239, 4, 0.5);
 }
 
 

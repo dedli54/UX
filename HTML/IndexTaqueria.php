@@ -42,7 +42,9 @@
         </div>
 
         <nav id="opciones">
-            <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
+   
+        
+        <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>    <!--  NO SE VE COMO UN BOTON CAMBIAR PARA QUE SE VEA-->
             <?php if($usuario_autenticado):?>
             <a>Bienvenido: <?php echo $_SESSION['nombres_usuario']; ?></a>
@@ -50,7 +52,8 @@
             <?php else:?>
             <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
-            <?php endif; ?>
+
+             <?php endif; ?>
         </nav>
 
         <div class="Menu">

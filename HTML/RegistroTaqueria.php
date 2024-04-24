@@ -12,10 +12,12 @@
 <body>
     <header>
         <nav id="opciones">
+        <input type="button" value="Regresar" onclick="history.go(-1)">
             <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>
             <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
+
         </nav>
     </header>
 

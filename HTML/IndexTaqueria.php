@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <title>Taqueria Juarez | Menu</title>
 <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-<!---->    <link rel="stylesheet" href="../CSS/Guabos.css">
+<!---->    <link rel="stylesheet" href="../CSS/IndexTaqueria.css">
 </head>
 
 <body>
@@ -183,7 +183,7 @@
                     </section>
 
                     <div class="contenedor_producto producto" data-item="3">
-                        <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="La Guabos">
+                        <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="papa dorada">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Papitas Doradas</h2>
                             <p class="descripcion_producto">Riquisima con salsa de aguacate

@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav id="opciones">
-            <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
+            <a href="/HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>
             <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>

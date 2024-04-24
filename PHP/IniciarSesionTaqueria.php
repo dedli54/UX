@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $conexion = mysqli_connect("localhost", "root", "", "taqueriajuarezdb");
 
 if ($conexion) 
@@ -25,25 +27,24 @@ if ($conexion)
             // Credenciales válidas, obtener el nombre de usuario
             $fila = $validarCorreoContra->fetch_assoc();
 
-            $id = $fila["id_usuario"];
-            $nombres = $fila["nombres_usuario"];
-            $apellidos = $fila["apellidos_usuario"];
-            $correo = $fila["correo_usuario"];
-            $telefono = $fila["telefono_usuario"];
-            $nacimiento = $fila["nacimiento_usuario"];
+            $id = $fila['id_usuario'];
+            $nombres = $fila['nombres_usuario'];
+            $apellidos = $fila['apellidos_usuario'];
+            $correo = $fila['correo_usuario'];
+            $telefono = $fila['telefono_usuario'];
+            $nacimiento = $fila['nacimiento_usuario'];
             // Iniciar sesión y almacenar el nombre de usuario
-            session_start();
-            $_SESSION["id_usuario"] = $id;
-            $_SESSION["nombres_usuario"] = $nombres;
-            $_SESSION["apellidos_usuario"] = $apellidos;
-            $_SESSION["correo_usuario"] = $correo;
-            $_SESSION["telefono_usuario"] = $telefono;
-            $_SESSION["nacimiento_usuario"] = $nacimiento;
+            $_SESSION['id_usuario'] = $id;
+            $_SESSION['nombres_usuario'] = $nombres;
+            $_SESSION['apellidos_usuario'] = $apellidos;
+            $_SESSION['correo_usuario'] = $correo;
+            $_SESSION['telefono_usuario'] = $telefono;
+            $_SESSION['nacimiento_usuario'] = $nacimiento;
             // Redirigir al dashboard
             echo '
             <script>
                 alert("Sesión Iniciada de manera exitosa!");
-                window.location = "../HTML/Guabos.html";
+                window.location = "../HTML/IndexTaqueria.php";
             </script>
             '; 
         }

@@ -1,3 +1,22 @@
+<?php
+    session_start();
+
+
+    if(!isset($_SESSION['id_usuario']))
+    {
+        echo '
+        <script>
+            alert("Se le recomienda iniciar sesión, para tener una experiencia más personalizada!");
+        </script>
+        ';
+        $usuario_autenticado = isset($_SESSION['id_usuario']);
+        session_destroy();
+    }else
+    {
+        $usuario_autenticado = isset($_SESSION['id_usuario']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,10 +42,15 @@
         </div>
 
         <nav id="opciones">
-            <a href="../HTML/Guabos.html" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
+            <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>    <!--  NO SE VE COMO UN BOTON CAMBIAR PARA QUE SE VEA-->
+            <?php if($usuario_autenticado):?>
+            <a>Bienvenido: <?php echo $_SESSION['nombres_usuario']; ?></a>
+            <a href="../PHP/CerrarSesionTaqueria.php">Cerrar Sesion</a>
+            <?php else:?>
             <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
+            <?php endif; ?>
         </nav>
 
         <div class="Menu">

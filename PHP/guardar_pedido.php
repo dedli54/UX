@@ -8,7 +8,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
     $id_usuario = $_SESSION["id_usuario"];
 } else {
     // Si no ha iniciado sesión o no hay información de teléfono, redirigir a la página de inicio de sesión
-    header("Location: iniciosesion.php");
+    header("Location: pagar_orden.php");
     exit;
 }
 

@@ -1,22 +1,3 @@
-<?php
-// Iniciar sesión
-session_start();
-
-// Verificar si el usuario ha iniciado sesión y si hay información de teléfono
-if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSION["id_usuario"])) {
-    $nombre = $_SESSION["nombre"];
-    // Obtener el teléfono de la sesión
-    $telefono = $_SESSION["telefono"];
-    $id_usuario = $_SESSION["id_usuario"];
-
-} else {
-    // Si no ha iniciado sesión o no hay información de teléfono, redirigir a la página de inicio de sesión
-    header("Location: iniciosesion.php");
-    exit;
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +17,6 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
 <!-- Esta linea de arriba es un boton que podemos usar para regresar a la paigna anterior-->
         <a class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                    alt="logo" /></a>
-            <a><?php echo $nombre; ?></a>
         </nav>
     </header>
 
@@ -51,7 +31,7 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSIO
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="telefono">Confirmar Teléfono</label>
-                            <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" readonly>
+                            <input type="text" id="telefono" name="telefono" value="">
                         </div>
 
                         <hr class="mb-4">

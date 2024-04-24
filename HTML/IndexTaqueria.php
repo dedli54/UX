@@ -43,6 +43,7 @@
 
         <nav id="opciones">
    
+        <!---->
         
         <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
                     alt="logo" /></a>    <!--  NO SE VE COMO UN BOTON CAMBIAR PARA QUE SE VEA-->

@@ -200,12 +200,10 @@
                             <h2 class="modal__title">Nombre</h2>
                             <p class="modal__paragraph">Lorem ipsum </p>
                             <form id="pedidoForm">
-                                <div class="form-group opciones_papas">
+                            <div class="form-group opciones_papas">
                                     <label>¿Cuantas quiere agregar?</label>  
-                                </div>
+                                </div>  
                             </form>
-                            </form>
-
                             <div id="resultado">
                                 <h3>Precio: $<span id="total">0.00</span></h3>
                             </div>
@@ -215,7 +213,7 @@
                                     <button class="button_cantidad menos">-</button>
                                     <span id="cantidad">1</span>
                                     <button class="button_cantidad mas">+</button>
-                                    <button class="modal__add" id="agregarAlCarrito">Agregar</a>
+                                    <button class="modal__add" id="agregarAlCarrito2">Agregar</a>
                             </div>
 
                         </div>
@@ -247,9 +245,7 @@
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
                                     <label>¿Cuantas quiere agregar?</label>  
-                                </div>
-
-                                
+                                </div>                                
                             </form>
 
                             <div id="resultado">
@@ -981,9 +977,9 @@
         </div>
     </footer>
 
-    <script src="../JS/Jquery.js"></script>
-   <script src="../JS/DespliegueHeader.js"></script>
-    <script src="../JS/ModalesFuncionamiento.js"></script>
+    <script src="../JS/JqueryIndexTaqueria.js"></script>
+   <script src="../JS/DespliegueHeaderTaqueria.js"></script>
+    <script src="../JS/ModalesFuncionamientoTaqueria.js"></script>
     <!-- <script src="../JS/CarritoItems.js"></script> -->
     <!--<script src="../Librerias/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>-->
     <!-- <script src="../JS/SumaFromularios.js"></script> -->

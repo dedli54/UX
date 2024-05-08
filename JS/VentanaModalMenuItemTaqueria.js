@@ -204,8 +204,3 @@ function actualizarPrecio(modal) {
     // Actualiza el resultado en el modal
     document.getElementById('total').textContent = precioTotal.toFixed(2);
 }
-
-
-
-
-

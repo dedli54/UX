@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             //console.log(itemsCarrito.length);
             //console.log(itemsCarrito);
             // Redirige a Pagar.php
-            window.location.href = '../PHP/pagar_orden.php';
+            window.location.href = '../HTML/PagarOrdenTaqueria.php';
             //btnPagar.removeEventListener('click');
         } else {
             // Si no hay elementos, muestra un mensaje o realiza otra acción

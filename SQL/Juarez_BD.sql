@@ -1,10 +1,6 @@
 CREATE DATABASE taqueriajuarezdb;
 USE taqueriajuarezdb;
 
---
--- Estructura de tabla para la tabla `usuario`
---
-
 CREATE TABLE `taqueriajuarezdb`.`tablausuarios` (
 `id_usuario` INT NOT NULL AUTO_INCREMENT COMMENT 'ID AUTOMATICO DEL USUARIO' , 
 `nombres_usuario` VARCHAR(60) NOT NULL COMMENT 'NOMBRE O NOMBRES DEL USUARIO' , 
@@ -16,16 +12,9 @@ CREATE TABLE `taqueriajuarezdb`.`tablausuarios` (
 PRIMARY KEY (`id_usuario`)) 
 ENGINE = InnoDB COMMENT = 'TABLA CON LOS USUARIOS REGISTRADOS A LA PAGINA DE TAQUERIA';
 SELECT * FROM tablausuarios;
---
--- Volcado de datos para la tabla `usuario`
---
 
-INSERT INTO `usuario` (`nombre`, `apellidos`, `correo_electronico`, `contrasena`, `telefono`) VALUES
-('a', '$a', 'ao', 'a', 8115146651),
-('babu', 'castillo', 'babu', 'abcd', 2147483647),
-('David2', 'Castillo2', 'davidemmanuelbc2@gmail.com', 'adaefe', 2147483647),
-('David Emmanuel', 'Bustamante Castillo', 'davidemmanuelbc@gmail.com', 'ARCHEr011', 2147483647),
-('Jose ', 'Wilson', 'josewilson@gmail.com', 'santi', 8122964247);
+INSERT INTO `tablausuarios` (`nombres_usuario`, `apellidos_usuario`, `correo_usuario`, `telefono_usuario`, `nacimiento_usuario`,`contrasena_usuario`) VALUES
+('MIGUEL', 'LOPEZ', 'miguelopez123@hotmail.com', 8115146651, '1999-06-29','123456')
 
 -- Crear tabla de productos
 CREATE TABLE `producto` (

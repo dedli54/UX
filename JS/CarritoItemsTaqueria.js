@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Obtén referencias a los elementos relevantes
     const agregarAlCarritoBtn = document.getElementById('agregarAlCarrito');
-    const agregarAlCarritoBtn2 = document.getElementById('agregarAlCarrito2');
     const carritoLista = document.getElementById('carrito_lista');
     const totalCarrito = document.getElementById('totalCarrito');
     actualizarTotalCarrito();
@@ -35,30 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="itemNombre">${nombre} $<span class="itemprecio">${precio.toFixed(2)}</span></p>
             <p class="itempapas">${papas}</p>
             <p class="itembebida">${bebida}</p>
-            <p class="itemcantidad">Cantidad: <span class="itemcannum">${cantidad}</span></p>
-            <button type="button" class="botonEliminar">Eliminar</button>
-        `;
-
-        // Agrega el nuevo elemento al carrito
-        carritoLista.appendChild(nuevoItemCarrito);
-
-        // Actualiza el total del carrito
-        actualizarTotalCarrito();
-    });
-
-    agregarAlCarritoBtn2.addEventListener('click', function () {
-        // Obtén la información de la ventana modal
-        const modalActual = document.querySelector('.modal--show');
-        const numeroProducto = modalActual.dataset.item;
-        const nombre = modalActual.querySelector('.modal__title').textContent;
-        const precio = parseFloat(modalActual.querySelector('#total').textContent);
-        const cantidad = parseInt(modalActual.querySelector('#cantidad').textContent);
-
-        const nuevoItemCarrito = document.createElement('div');
-        nuevoItemCarrito.classList.add('itemCarrito');
-
-        nuevoItemCarrito.innerHTML = `
-            <p class="itemNombre">${nombre} $<span class="itemprecio">${precio.toFixed(2)}</span></p>
             <p class="itemcantidad">Cantidad: <span class="itemcannum">${cantidad}</span></p>
             <button type="button" class="botonEliminar">Eliminar</button>
         `;

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actualizarTotalCarrito();
         }
     });
-    
+
     //MANDAR INFORMACION A LOCALSTORAGE
     // Selecciona el botón "Ir a Pagar"
     const btnPagar = document.querySelector('.btnPagar');
@@ -213,7 +213,128 @@ productos.forEach(producto => {
 
         // Agrega nuevos eventos
         agregarEventos(modalCorrespondiente, producto);
+
+        // const gruposDeRadio = modalCorrespondiente.querySelectorAll('.opciones');
+
+        // // Itera sobre cada grupo de radioS
+        // gruposDeRadio.forEach(function (grupo) {
+        //     // Encuentra todos los radio buttons en el grupo
+        //     const radios = grupo.querySelectorAll('input[type="radio"]');
+
+        //     // Establece el primer radio como seleccionado por defecto
+        //     radios[0].checked = true;
+        // });
+
+        // const radiopapas = modalCorrespondiente.querySelectorAll('input[name="papas"]');
+        // // Agregar eventos para actualizar el precio al cambiar los radios
+        // radiopapas.forEach(rb => rb.addEventListener('change', function () {
+        //     actualizarPrecio(modalCorrespondiente, producto);
+        // }));
+
+        // const radiobebidas = modalCorrespondiente.querySelectorAll('input[name="bebida"]');
+        // // Agregar eventos para actualizar el precio al cambiar los radios
+        // radiobebidas.forEach(rb => rb.addEventListener('change', function () {
+        //     actualizarPrecio(modalCorrespondiente, producto);
+        // }));
+        // // Obtén todos los elementos de cantidad y botones menos/más
+        // const cantidadSpan = modalCorrespondiente.querySelector('#cantidad');
+        // const menosButton = modalCorrespondiente.querySelector('.menos');
+        // const masButton = modalCorrespondiente.querySelector('.mas');
+        // let cantidad = 1;
+
+        // // Establece la cantidad inicial
+        // cantidadSpan.textContent = cantidad;
+
+        // // Maneja clics en el botón menos
+        // menosButton.addEventListener('click', function () {
+        //     if (cantidad > 1) {
+        //         cantidad--;
+        //         cantidadSpan.textContent = cantidad;
+        //         actualizarPrecio(modalCorrespondiente, producto);
+        //     }
+        // });
+
+        // // Maneja clics en el botón más
+        // masButton.addEventListener('click', function () {
+        //     cantidad++;
+        //     cantidadSpan.textContent = cantidad;
+        //     actualizarPrecio(modalCorrespondiente, producto);
+        // });
+
+        // const closeButton = modalCorrespondiente.querySelector('.modal__close');
+        // closeButton.addEventListener('click', (e) => {
+        //     cantidad = 1;
+        //     const boton = closeButton.closest('.modal');
+        //     boton.classList.remove('modal--show');
+        //     //limpiarEventos(modalCorrespondiente);
+        // });
+
+        // const agregarAlCarritoBtn = modalCorrespondiente.querySelector('#agregarAlCarrito');
+        // // Maneja el clic en el botón "Agregar" en la ventana modal
+        // agregarAlCarritoBtn.addEventListener('click', function () {
+        //     // Obtén la información de la ventana modal
+        //     const nombre = modalCorrespondiente.querySelector('.modal__title').textContent;
+        //     const precio = parseFloat(modalCorrespondiente.querySelector('#total').textContent);
+        //     const papas = modalCorrespondiente.querySelector('input[name="papas"]:checked').parentElement.innerText;
+        //     const bebida = modalCorrespondiente.querySelector('input[name="bebida"]:checked').parentElement.innerText;
+        //     const cantidad = parseInt(modalCorrespondiente.querySelector('#cantidad').textContent);
+        //     //const precioTotalItem = precio * cantidad;
+
+        //     // Crea un nuevo elemento para el carrito
+        //     const nuevoItemCarrito = document.createElement('div');
+        //     nuevoItemCarrito.classList.add('itemCarrito');
+
+        //     nuevoItemCarrito.innerHTML = `
+        //         <p class="itemNombre">${nombre} $<span class="itemprecio">${precio.toFixed(2)}</span></p>
+        //         <p class="itempapas">${papas}</p>
+        //         <p class="itembebida">${bebida}</p>
+        //         <p class="itemcantidad">Cantidad: <span class="itemcannum">${cantidad}</span></p>
+        //         <button type="button" class="botonEliminar">Eliminar</button>`;
+
+        //     // Agrega el nuevo elemento al carrito
+        //     carritoLista.appendChild(nuevoItemCarrito);
+
+        //     // Actualiza el total del carrito
+        //     actualizarTotalCarrito();
+        // });
     });
+
+    // // Maneja clics en los botones "Eliminar"
+    // carritoLista.addEventListener('click', function (event) {
+    //     if (event.target.classList.contains('botonEliminar')) {
+    //         // Elimina el elemento del carrito
+    //         event.target.parentElement.remove();
+
+    //         // Actualiza el total del carrito
+    //         actualizarTotalCarrito();
+    //     }
+    // });
+
+    // Función para actualizar el total del carrito
+    // function actualizarTotalCarrito() {
+    //     const itemsCarrito = carritoLista.getElementsByClassName('itemprecio');
+    //     let total = 0;
+
+    //     // Suma los precios de todos los items en el carrito
+    //     for (let item of itemsCarrito) {
+    //         total += parseFloat(item.textContent);
+    //     }
+
+    //     // Actualiza el contenido del total del carrito
+    //     totalCarrito.innerHTML = `Total: $<span>${total.toFixed(2)}</span>`;
+
+    //     // Muestra el mensaje si el carrito está vacío
+    //     if (itemsCarrito.length === 0) {
+    //         carritoLista.innerHTML = '<p id="mensajevacio">Carrito sin productos</p>';
+    //     }
+    //     else {
+    //         const mensajeVacio = document.getElementById('mensajevacio');
+    //         if (mensajeVacio) {
+    //             mensajeVacio.remove();
+    //         }
+    //     }
+    // }
+
 });
 
 function limpiarEventos(modal) {

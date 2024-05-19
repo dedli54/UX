@@ -16,15 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const papas = modalActual.querySelector('input[name="papas"]:checked').parentElement.innerText;
         const bebida = modalActual.querySelector('input[name="bebida"]:checked').parentElement.innerText;
         const cantidad = parseInt(modalActual.querySelector('#cantidad').textContent);
-        // const numeroProducto = document.querySelector('.modal--show').dataset.item;
-        // const nombre = document.querySelector(`.modal-item[data-item="${numeroProducto}"] .modal__title`).textContent;
-        // const precio = parseFloat(document.getElementById('total').textContent);
-        // const papas = document.querySelector(`input[name="papas"]:checked`).parentElement.innerText;
-        // const bebida = document.querySelector(`input[name="bebida"]:checked`).parentElement.innerText;
-        // const cantidad = parseInt(document.getElementById('cantidad').textContent);
-
-        // Calcula el precio total del item en el carrito
-        //const precioTotalItem = precio * cantidad;
 
         // Crea un nuevo elemento para el carrito
         const nuevoItemCarrito = document.createElement('div');

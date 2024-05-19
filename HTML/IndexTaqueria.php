@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Taqueria Juarez | Menu</title>
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <!---->
     <link rel="stylesheet" href="../CSS/IndexTaqueria.css">
 </head>
 
@@ -619,9 +618,9 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/JqueryIndexTaqueria.js"></script>
-    <script src="../JS/DespliegueHeaderTaqueria.js"></script>
-    <script src="../JS/ModalesFuncionamientoTaqueria.js"></script>
+    <script src="../JS/JS_IndexTaqueria/JqueryIndexTaqueria.js"></script>
+    <script src="../JS/JS_IndexTaqueria/DespliegueHeaderTaqueria.js"></script>
+    <script src="../JS/JS_IndexTaqueria/ModalesFuncionamientoTaqueria.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/Pagar.css">
+    <link rel="stylesheet" href="../CSS/PagarTaqueria.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                         <hr class="mb-4">
 
                         <div class="form-group">
-                            <label for="input_tipoOrden">Tipo de orden</label><br>
+                            <label for="domicilio">Tipo de orden</label><br>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" id="domicilio" type="radio" name="TipoOrden" value="domicilio" checked onchange="toggleDireccionVisibility()">
                                 <label class="form-check-label" for="domicilio">A domicilio (+$30)</label>
@@ -54,13 +54,13 @@
                         <hr class="mb-4">
 
                         <div class="form-group">
-                            <label for="input_Metodo">Método de pago</label><br>
+                            <label for="efectivo">Método de pago</label><br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Metodo" value="efectivo" checked>
+                                <input class="form-check-input" id="efectivo" type="radio" name="Metodo" value="efectivo" checked>
                                 <label class="form-check-label" for="efectivo">Efectivo</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Metodo" value="terminal">
+                                <input class="form-check-input" id="terminal" type="radio" name="Metodo" value="terminal">
                                 <label class="form-check-label" for="terminal">Transferencia</label>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="Cuenta">Cuenta</label>
+                            <label>Cuenta</label>
 
                             <div class="ListaItems">
                             </div>
@@ -135,7 +135,7 @@
             direccionDiv.style.display = (tipoOrden === 'recoger') ? 'none' : 'block';
         }
     </script>
-    <script src="../JS/validarCompraTaqueria.js"></script>
+    <script src="../JS/JS_PagarOrdenTaqueria/validarCompraTaqueria.js"></script>
 </body>
 
 </html>

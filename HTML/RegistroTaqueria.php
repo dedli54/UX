@@ -24,36 +24,46 @@
     <div class="container">
         <div class="form-box">
             <h2>Registrarse</h2>
-            <form action="../PHP/CapturaUsuarioTaqueria.php" method="POST">
+            <form action="../PHP/CapturaUsuarioTaqueria.php" onsubmit="return validarFormulario();">
                 <div class="form-group">
-                    <label for="nombres">Nombres:</label>
-                    <input type="text" id="nombres" name="nombres" required>
+                    <label for="nombres">Nombre(s):</label>
+                    <input type="text" id="nombres" oninput="checkName()" required>
+                    <br>
+                    <p id="message-nombre">Favor de ingresar un nombre válido.</p>
                 </div>
                 <div class="form-group">
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" required>
+                    <label for="apellidos">Apellido(s):</label>
+                    <input type="text" id="apellidos" oninput="checkLastName()" required>
+                    <br>
+                    <p id="message-apellido">Favor de ingresar un apellido válido.</p>
                 </div>
                 <div class="form-group">
                     <label for="correo">Correo Electronico:</label>
-                    <input type="text" id="correo" name="correo" required>
+                    <input type="text" id="correo" oninput="checkCorreo()" required>
+                    <br>
+                    <p id="message-correo">Favor de ingresar un correo válido.</p>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <input type="tel" id="telefono" oninput="checkTel()" required>
+                    <br>
+                    <p id="message-telefono">Favor de ingresar un telefono válido.</p>
                 </div>
                 <div class="form-group">
-                    <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" oninput="checkDate()" required>
+                    <br>
+                    <p id="message-fecha">Favor de ingresar una fecha válida.</p>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" oninput="checkPasswordMatch()" required>
+                    <input type="password" id="password" oninput="checkPasswordMatch()" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Confirmar Contraseña:</label>
-                    <input type="password" id="password2" name="password2" oninput="checkPasswordMatch()" required>
+                    <input type="password" id="password2" oninput="checkPasswordMatch()" required>
                     <br>
-                    <p id="message">Las contraseñas no coinciden.</p>
+                    <p id="message-contrasena">Las contraseñas no coinciden.</p>
                 </div>
                 <button type="submit">Registrarse</button>
             </form>
@@ -98,7 +108,7 @@
 
         </div>
     </footer>
-    <script src="../JS/JS_RegistroTaqueria/ValidarContrasenaTaqueria.js"></script>
+    <script src="../JS/JS_RegistroTaqueria/ValidarRegistroTaqueria.js"></script>
 </body>
 
 </html>

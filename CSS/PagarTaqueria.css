@@ -73,7 +73,7 @@ header #opciones a {
 }
 
 #message {
-  font-size: 14px;
+  font-size: 12px;
   display: none;
 }
 
@@ -208,7 +208,7 @@ input[type="text"],
 input[type="tel"] {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }

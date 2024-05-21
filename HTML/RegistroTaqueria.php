@@ -48,11 +48,13 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" oninput="checkPasswordMatch()" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Confirmar Contraseña:</label>
-                    <input type="password" id="password2" name="password2" required>
+                    <input type="password" id="password2" name="password2" oninput="checkPasswordMatch()" required>
+                    <br>
+                    <p id="message">Las contraseñas no coinciden.</p>
                 </div>
                 <button type="submit">Registrarse</button>
             </form>
@@ -97,6 +99,7 @@
 
         </div>
     </footer>
+    <script src="../JS/JS_RegistroTaqueria/ValidarContrasenaTaqueria.js"></script>
 </body>
 
 </html>

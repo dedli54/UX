@@ -1,10 +1,18 @@
 <?php
-        session_start();
+session_start();
+
+if (isset($_SESSION['id_usuario'])) {
+
+    session_start();
+    if(isset($_SESSION['id_usuario']))
+    {
+        $usuario_autenticado = isset($_SESSION['id_usuario']);
+        session_destroy();
         echo '
         <script>
-            alert("Se cerró la sesión de manera satisfactoria!");
+            alert("Sesión Cerrada Correctamente!");
+            window.location = "../HTML/IndexTaqueria.php";
         </script>
-        ';
-        session_destroy();
-        header("location: ../HTML/IndexTaqueria.php");
-?>
+        ';  
+    }
+}

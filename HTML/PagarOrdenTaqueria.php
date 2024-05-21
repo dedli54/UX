@@ -28,7 +28,8 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="telefono">Confirmar Teléfono</label>
-                            <input type="text" id="telefono" name="telefono" value="">
+                            <input type="text" id="telefono" name="telefono" oninput="ValidarTelefono()" value="">
+                            <p id="message">Verifique que el telefono sea válido.</p>
                         </div>
 
                         <hr class="mb-4">
@@ -124,18 +125,9 @@
 
         </div>
     </footer>
-
-    <script>
-        // Función para mostrar u ocultar el div según el tipo de orden seleccionado
-        function toggleDireccionVisibility() {
-            var tipoOrden = document.querySelector('input[name="TipoOrden"]:checked').value;
-            var direccionDiv = document.getElementById('direccionDiv');
-
-            // Si el tipo de orden es "recoger", oculta el div, de lo contrario, muéstralo
-            direccionDiv.style.display = (tipoOrden === 'recoger') ? 'none' : 'block';
-        }
-    </script>
     <script src="../JS/JS_PagarOrdenTaqueria/validarCompraTaqueria.js"></script>
+    <script src="../JS/JS_PagarOrdenTaqueria/validarTelefonoTaqueria.js"></script>
+    <script src="../JS/JS_PagarOrdenTaqueria/mostrarOcultarDireccionTaqueria.js"></script>
 </body>
 
 </html>

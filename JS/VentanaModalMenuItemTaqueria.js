@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modalCorrespondiente.querySelector('.modal__paragraph').textContent = descripcion;
             // Aquí, ajusta según tu estructura específica del precio
             modalCorrespondiente.querySelector('#total').textContent = precioNumerico.toFixed(2);
-            modalCorrespondiente.querySelector('#cantidad').textContent='1';
+            modalCorrespondiente.querySelector('#cantidad').textContent = '1';
 
             reiniciarRadios(modalCorrespondiente);
             actualizarPrecio(modalCorrespondiente);
@@ -72,40 +72,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-        // Obtén todos los elementos de cantidad y botones menos/más
-        const cantidadSpan = modalactual.querySelector('#cantidad');
-        const menosButton = modalactual.querySelector('.menos');
-        const masButton = modalactual.querySelector('.mas');
-    
-        // Establece la cantidad inicial
-        cantidadSpan.textContent = cantidad;
-    
-        // Maneja clics en el botón menos
-        menosButton.addEventListener('click', function () {
-            if (cantidad > 1) {
-                cantidad--;
-                cantidadSpan.textContent = cantidad;
-                actualizarPrecio();
-            }
-        });
-    
-        // Maneja clics en el botón más
-        masButton.addEventListener('click', function () {
-            cantidad++;
+    // Obtén todos los elementos de cantidad y botones menos/más
+    const cantidadSpan = modalactual.querySelector('#cantidad');
+    const menosButton = modalactual.querySelector('.menos');
+    const masButton = modalactual.querySelector('.mas');
+
+    // Establece la cantidad inicial
+    cantidadSpan.textContent = cantidad;
+
+    // Maneja clics en el botón menos
+    menosButton.addEventListener('click', function () {
+        if (cantidad > 1) {
+            cantidad--;
             cantidadSpan.textContent = cantidad;
             actualizarPrecio();
-        });
+        }
+    });
+
+    // Maneja clics en el botón más
+    masButton.addEventListener('click', function () {
+        cantidad++;
+        cantidadSpan.textContent = cantidad;
+        actualizarPrecio();
+    });
 });
 
 const radiopapas = document.querySelectorAll('input[name="papas"]');
 // Agregar eventos para actualizar el precio al cambiar los radios
-radiopapas.forEach(rb=>rb.addEventListener('change',function() {
+radiopapas.forEach(rb => rb.addEventListener('change', function () {
     actualizarPrecio();
 }));
 
 const radiobebidas = document.querySelectorAll('input[name="bebida"]');
 // Agregar eventos para actualizar el precio al cambiar los radios
-radiobebidas.forEach(rb=>rb.addEventListener('change',function() {
+radiobebidas.forEach(rb => rb.addEventListener('change', function () {
     actualizarPrecio();
 }));
 
@@ -136,7 +136,7 @@ function actualizarPrecio(modal) {
     // Calcula el precio total
     let precioPapas = 0;
     let precioBebida = 0;
-    const regex= /\(\$(\d+(\.\d+)?)\)/;
+    const regex = /\(\$(\d+(\.\d+)?)\)/;
 
     if (radioPapas) {
         const textopapas = radioPapas.parentElement.innerText;
@@ -149,7 +149,7 @@ function actualizarPrecio(modal) {
     if (radioBebida) {
         const textBebida = radioBebida.parentElement.innerText;
         const matchBebida = regex.exec(textBebida);
-        if (matchBebida  && matchBebida[1]) {
+        if (matchBebida && matchBebida[1]) {
             precioBebida = parseFloat(matchBebida[1]);
         }
     }

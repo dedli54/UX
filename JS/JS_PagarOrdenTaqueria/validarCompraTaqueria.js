@@ -16,23 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
       // Construir el contenido del item (puedes ajustar esto según tus necesidades)
       if ("papas" in item) {
         contenidoItem = `
-            <p class="itemNombre">${
-              item.nombre
-            }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+            <p class="itemNombre">${item.nombre
+          }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
             <p class="itempapas">${item.papas}</p>
             <p class="itembebida">${item.bebida}</p>
-            <p class="itemcantidad">Cantidad: <span class="itemcannum">${
-              item.cantidad
-            }</span></p>`;
+            <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad
+          }</span></p>`;
       } else {
         contenidoItem = `
-                <p class="itemNombre">${
-                  item.nombre
-                }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+                <p class="itemNombre">${item.nombre
+          }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
                 <p class="itembebida">${item.bebida}</p>
-                <p class="itemcantidad">Cantidad: <span class="itemcannum">${
-                  item.cantidad
-                }</span></p>`;
+                <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad
+          }</span></p>`;
       }
       // Agregar el contenido al nuevo item
       nuevoItem.innerHTML = contenidoItem;

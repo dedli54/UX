@@ -13,9 +13,8 @@
 <body>
     <header>
         <nav id="opciones">
-        <input type="button" value="Regresar" onclick="history.go(-1)">
-            <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png"
-                    alt="logo" /></a>
+            <input type="button" value="Regresar" onclick="history.go(-1)">
+            <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png" alt="logo" /></a>
             <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
 
@@ -77,7 +76,7 @@
                 <h3>Encuentranos en:</h3>
                 <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
                 <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
-                <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>              
+                <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
             </div>
 
             <div class="footer_box">
@@ -91,7 +90,7 @@
                 <p>taqueria-juarez@prodigy.net.mx</p>
             </div>
 
-            
+
             <div class="box__copyright">
                 <hr>
                 <p>Todos los derechos reservados © 2024 <b>Taquería Juárez </b></p>

@@ -3,27 +3,25 @@ session_start();
 
 $conexion = mysqli_connect("localhost", "root", "", "taqueriajuarezdb");
 
-if ($conexion) 
-{
+if ($conexion) {
     // Verificar si se recibieron datos del formulario
-    if (isset($_POST['correo']) && 
-        isset($_POST['password'])) 
-    {
+    if (
+        isset($_POST['correo']) &&
+        isset($_POST['password'])
+    ) {
         // Recuperar datos del formulario
         $correo = $_POST['correo'];
         $contrasena = $_POST['password'];
         //Validar que el correo electronico ya está registrado en la base de datos
         $validarCorreoContra = mysqli_query($conexion, "SELECT * FROM tablausuarios WHERE correo_usuario='$correo' AND contrasena_usuario='$contrasena'");
-        if  (mysqli_num_rows($validarCorreoContra)==0)
-        {
+        if (mysqli_num_rows($validarCorreoContra) == 0) {
             echo '
             <script>
                 alert("Verifice sus credenciales y vuelta a intentar!");
                 window.location = "../HTML/InicioSesionTaqueria.php";
             </script>
-            ';            
-        }else
-        {
+            ';
+        } else {
             // Credenciales válidas, obtener el nombre de usuario
             $fila = $validarCorreoContra->fetch_assoc();
 
@@ -46,14 +44,12 @@ if ($conexion)
                 alert("Sesión Iniciada de manera exitosa!");
                 window.location = "../HTML/IndexTaqueria.php";
             </script>
-            '; 
+            ';
         }
-    } else 
-    {
+    } else {
         echo "Faltan datos en el formulario.";
     }
-} else 
-{
+} else {
     echo "FALLO DE CONEXIÓN";
     echo '
     <script>
@@ -62,4 +58,3 @@ if ($conexion)
     ';
 }
 mysqli_close($conexion);
-?>

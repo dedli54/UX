@@ -60,16 +60,16 @@ foreach ($data['cuenta'] as $detalle) {
 $conexion->close();
 
 // Función para obtener el ID del producto por su nombre
-function obtenerIdProducto($conexion, $nombreProducto) {
-    $nombreProducto = str_replace(' $', '', $nombreProducto);
+function obtenerIdProducto($conexion, $nombreProducto)
+{
+    // $nombreProducto = str_replace(' $', '', $nombreProducto);
 
-    $consulta = $conexion->prepare("SELECT id_producto FROM producto WHERE nombre = ?");
-    $consulta->bind_param("s", $nombreProducto);
-    $consulta->execute();
-    $consulta->bind_result($idProducto);
-    $consulta->fetch();
-    $consulta->close();
+    // $consulta = $conexion->prepare("SELECT id_producto FROM producto WHERE nombre = ?");
+    // $consulta->bind_param("s", $nombreProducto);
+    // $consulta->execute();
+    // $consulta->bind_result($idProducto);
+    // $consulta->fetch();
+    // $consulta->close();
 
-    return $idProducto;
+    // return $idProducto;
 }
-?>

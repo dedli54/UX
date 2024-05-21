@@ -1,16 +1,16 @@
 <?php
 $conexion = mysqli_connect("localhost", "root", "", "taqueriajuarezdb");
 
-if ($conexion) 
-{
+if ($conexion) {
     // Verificar si se recibieron datos del formulario
-    if (isset($_POST['nombres']) && 
-        isset($_POST['apellidos']) && 
-        isset($_POST['correo']) && 
-        isset($_POST['telefono']) && 
-        isset($_POST['fecha-nacimiento']) && 
-        isset($_POST['password'])) 
-    {
+    if (
+        isset($_POST['nombres']) &&
+        isset($_POST['apellidos']) &&
+        isset($_POST['correo']) &&
+        isset($_POST['telefono']) &&
+        isset($_POST['fecha-nacimiento']) &&
+        isset($_POST['password'])
+    ) {
         // Recuperar datos del formulario
         $nombres = $_POST['nombres'];
         $apellidos = $_POST['apellidos'];
@@ -20,23 +20,20 @@ if ($conexion)
         $contrasena = $_POST['password'];
         //Validar que el correo electronico ya no esté registrado en la base de datos
         $validarCorreo = mysqli_query($conexion, "SELECT * FROM tablausuarios WHERE correo_usuario='$correo'");
-        if  (mysqli_num_rows($validarCorreo)>0)
-        {
+        if (mysqli_num_rows($validarCorreo) > 0) {
             echo '
             <script>
                 alert("Ya hay un usuario registrado con ese correo electronico!");
                 window.location = "../HTML/InicioSesionTaqueria.php";
             </script>
-            ';            
-        }else
-        {
+            ';
+        } else {
             // Insertar los datos en la base de datos
             $query = "INSERT INTO tablausuarios(nombres_usuario,apellidos_usuario,correo_usuario,telefono_usuario,nacimiento_usuario,contrasena_usuario) 
             VALUES ('$nombres','$apellidos','$correo','$telefono','$nacimiento','$contrasena')";
             // Ejecucion de la Query
             $result = mysqli_query($conexion, $query);
-            if ($result) 
-            {
+            if ($result) {
                 //Después de procesar el formulario, redirecciona a la pagina principal
                 echo "Registro exitoso!";
                 echo '
@@ -45,8 +42,7 @@ if ($conexion)
                     window.location = "../HTML/InicioSesionTaqueria.php";
                 </script>
                 ';
-            } else 
-            {
+            } else {
                 echo "Error en el registro: " . mysqli_error($conexion);
                 echo '
                 <script>
@@ -56,12 +52,10 @@ if ($conexion)
                 ';
             }
         }
-    } else 
-    {
+    } else {
         echo "Faltan datos en el formulario.";
     }
-} else 
-{
+} else {
     echo "FALLO DE CONEXIÓN";
     echo '
     <script>
@@ -70,4 +64,3 @@ if ($conexion)
     ';
 }
 mysqli_close($conexion);
-?>

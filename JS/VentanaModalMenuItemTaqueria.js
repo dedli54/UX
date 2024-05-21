@@ -35,7 +35,6 @@ closeButtons.forEach(closeButton => {
 document.addEventListener('DOMContentLoaded', function () {
     // Obtén todos los productos y modales
     const productos = document.querySelectorAll('.contenedor_producto');
-    //const modales = document.querySelectorAll('.modal-item');
     let cantidad = 1;
     var modalactual;
     // Itera sobre cada producto
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
         producto.addEventListener('click', function () {
             // Obtiene el número del producto desde el atributo data
             const numeroProducto = producto.dataset.item;
-            //cantidad = 1;
             // Encuentra el modal correspondiente
             const modalCorrespondiente = document.querySelector(`.modal-item[data-item="${numeroProducto}"]`);
             modalactual = modalCorrespondiente;
@@ -108,7 +106,6 @@ const radiobebidas = document.querySelectorAll('input[name="bebida"]');
 radiobebidas.forEach(rb => rb.addEventListener('change', function () {
     actualizarPrecio();
 }));
-
 
 function reiniciarRadios(modal) {
     // Encuentra todos los grupos de radio en el modal

@@ -163,12 +163,11 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
                                     <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Orden Familiar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -214,12 +213,11 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
                                     <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Orden Familiar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -260,12 +258,11 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
                                     <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Orden Familiar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -306,12 +303,11 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
                                     <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Orden Familiar ($48)</li>
                                     </ol>
                                 </div>
                             </form>

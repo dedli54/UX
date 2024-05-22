@@ -94,6 +94,41 @@ function checkDate() {
   }
 }
 
+function checkPassword() {
+  var password = document.getElementById("password");
+  var message = document.getElementById("message-contrasena1");
+
+  if (password.value.length > 0) {
+
+    var lengthCheck = password.value.length >= 8;
+    var numberCheck = /[0-9]/.test(password.value);
+    var specialCharCheck = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password.value);
+
+    if (!lengthCheck) {
+      message.textContent = "La contraseña debe tener al menos 8 caracteres.";
+      encender(message, password);
+      return false;
+    } else if (!numberCheck) {
+      message.textContent = "La contraseña debe contener al menos un número.";
+      encender(message, password);
+      return false;
+    } else if (!specialCharCheck) {
+      message.textContent = "La contraseña debe contener al menos un carácter especial.";
+      encender(message, password);
+      return false;
+    } else {
+      message.textContent = "Contraseña válida.";
+      apagar(message, password);
+      password.style.borderColor = null;
+      return true;
+    }
+  } else {
+    apagar(message, password);
+    password.style.borderColor = null;
+    return false;
+  }
+}
+
 function checkPasswordMatch() {
   var password = document.getElementById("password");
   var confirmPassword = document.getElementById("password2");
@@ -128,7 +163,7 @@ function apagar(p, input) {
 
 function validarFormulario() {
 
-  if (checkName() && checkLastName() && checkCorreo() && checkTel() && checkDate() && checkPasswordMatch()) {
+  if (checkName() && checkLastName() && checkCorreo() && checkTel() && checkDate() && checkPassword() && checkPasswordMatch()) {
     return true;
   } else {
     alert("Verifique los datos ingresados!");

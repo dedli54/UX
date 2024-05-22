@@ -23,7 +23,7 @@
 
             <hr class="mb-4">
 
-            <form class="Compra" action="../HTML/IndexTaqueria.php" onsubmit="return validarFormulario();">
+            <form class="Compra" action="../HTML/IndexTaqueria.php" onsubmit="return validarFormulario();" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">

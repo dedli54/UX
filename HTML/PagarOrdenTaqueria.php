@@ -20,10 +20,8 @@
     <div class="container mt-4">
         <div class="form-box">
             <h2 class="mb-4">Compra</h2>
-
             <hr class="mb-4">
-
-            <form class="Compra" action="../HTML/IndexTaqueria.php" onsubmit="return validarFormulario();" method="POST">
+            <form class="Compra" action="../HTML/IndexTaqueria.php" onsubmit="return validarFormulario()" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -31,9 +29,7 @@
                             <input type="text" id="telefono" name="telefono" oninput="ValidarTelefono()" value="">
                             <p id="message">Verifique que el telefono sea válido.</p>
                         </div>
-
                         <hr class="mb-4">
-
                         <div class="form-group">
                             <label for="domicilio">Tipo de orden</label><br>
                             <div class="form-check form-check-inline">
@@ -45,15 +41,12 @@
                                 <label class="form-check-label" for="recoger">Para recoger</label>
                             </div>
                         </div>
-
                         <!-- Div que se ocultará/mostrará -->
                         <div class="form-group" id="direccionDiv">
                             <label for="input_Direccion">Dirección</label>
                             <input type="text" id="input_Direccion" class="">
                         </div>
-
                         <hr class="mb-4">
-
                         <div class="form-group">
                             <label for="efectivo">Método de pago</label><br>
                             <div class="form-check form-check-inline">
@@ -66,22 +59,16 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Cuenta</label>
-
                             <div class="ListaItems">
                             </div>
-
                             <hr class="mb-4">
-
                             <p class="Subtotal mt-3">Subtotal: $<span>0.00</span></p>
                             <p class="Total">Total: $<span>0.00</span></p>
                         </div>
-
                         <hr class="mb-4">
-
                         <button type="#" class="button" id="botonpagar">Terminar Orden</button>
                     </div>
                 </div>
@@ -99,30 +86,25 @@
                     <p>Empleamos para su preparación, ingredientes frescos dignos de deleitar el paladar de toda la familia, por ello también contamos con instalaciones que le harán sentir tan cómodo como si estuviera en casa.</p>
                 </div>
             </div>
-
             <div class="footer_box">
                 <h3>Encuentranos en:</h3>
                 <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
                 <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
                 <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
             </div>
-
             <div class="footer_box">
                 <h3>Direccion:</h3>
                 <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
                 <br>
                 <h3>Telefono:</h3>
                 <p>81-8340-1956</p>
-
                 <h3>Correo:</h3>
                 <p>taqueria-juarez@prodigy.net.mx</p>
             </div>
-
             <div class="box__copyright">
                 <hr>
                 <p>Todos los derechos reservados © 2024 <b>Taquería Juárez </b></p>
             </div>
-
         </div>
     </footer>
     <script src="../JS/JS_PagarOrdenTaqueria/validarCompraTaqueria.js"></script>

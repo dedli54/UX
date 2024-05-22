@@ -3,25 +3,31 @@
 session_start();
 
 // Verificar si el usuario ha iniciado sesión y si hay información de teléfono
-if (isset($_SESSION["nombre"]) && isset($_SESSION["telefono"]) && isset($_SESSION["id_usuario"])) {
-    $nombre = $_SESSION["nombre"];
-    $id_usuario = $_SESSION["id_usuario"];
+if (isset($_SESSION["nombres_usuario"]) && isset($_SESSION["telefono_usuario"]) && isset($_SESSION["id_usuario"])) {
+    $nombre = $_SESSION["nombres_usuario"];
+    $correo_usuario = $_SESSION["correo_usuario"];
 } else {
     // Si no ha iniciado sesión o no hay información de teléfono, redirigir a la página de inicio de sesión
-    header("Location: pagar_orden.php");
+    echo '
+    <script>
+        alert("Inicie sesion primero!");
+        window.location = "../HTML/InicioSesionTaqueria.php";
+    </script>
+    ';
+    header("Location: ../HTML/InicioSesionTaqueria.php");
     exit;
 }
 
 // Conecta con la base de datos
-$conexion = new mysqli("localhost", "root", "Bisonte55", "guabosbd");
+$conexion = new mysqli("localhost", "root", "", "taqueriajuarezdb");
 
 // Obtiene los datos del pedido y la cuenta desde la solicitud POST
 $data = json_decode(file_get_contents("php://input"), true);
 //echo $data;
 
 // Inserta los datos del pedido en la tabla 'pedido'
-$insertarPedido = $conexion->prepare("INSERT INTO pedido (id_usuario, tipo_orden, direccion, subtotal, total, metodo_pago) VALUES (?, ?, ?, ?, ?, ?)");
-$insertarPedido->bind_param("issdds", $id_usuario, $data['pedido']['tipoOrden'], $data['pedido']['direccion'], $data['pedido']['subtotal'], $data['pedido']['total'], $data['pedido']['metodopago']);
+$insertarPedido = $conexion->prepare("INSERT INTO tablapedidos(correo_usuario,tipo_orden,direccion,subtotal,total,metodo_pago) VALUES (?, ?, ?, ?, ?, ?)");
+$insertarPedido->bind_param($correo_usuario, $data['pedido']['tipoOrden'], $data['pedido']['direccion'], $data['pedido']['subtotal'], $data['pedido']['total'], $data['pedido']['metodopago']);
 $insertarPedido->execute();
 // if ($insertarPedido->execute()) {
 //     echo 1;

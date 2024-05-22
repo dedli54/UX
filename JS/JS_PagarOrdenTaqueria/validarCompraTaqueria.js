@@ -15,20 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
       let contenidoItem;
       // Construir el contenido del item (puedes ajustar esto según tus necesidades)
       if ("papas" in item) {
-        contenidoItem = `
-            <p class="itemNombre">${item.nombre
-          }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
-            <p class="itempapas">${item.papas}</p>
-            <p class="itembebida">${item.bebida}</p>
-            <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad
-          }</span></p>`;
+        contenidoItem = `<p class="itemNombre">${item.nombre}<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+                         <p class="itempapas">${item.papas}</p>
+                         <p class="itembebida">${item.bebida}</p>
+                         <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad}</span></p>`;
       } else {
-        contenidoItem = `
-                <p class="itemNombre">${item.nombre
-          }<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
-                <p class="itembebida">${item.bebida}</p>
-                <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad
-          }</span></p>`;
+        contenidoItem = `<p class="itemNombre">${item.nombre}<span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+                         <p class="itembebida">${item.bebida}</p>
+                         <p class="itemcantidad">Cantidad: <span class="itemcannum">${item.cantidad}</span></p>`;
       }
       // Agregar el contenido al nuevo item
       nuevoItem.innerHTML = contenidoItem;
@@ -69,30 +63,23 @@ function validarFormulario() {
     return false;
   }
   // Validar la dirección si se selecciona "A domicilio"
-  var tipoOrdenDomicilio = document.querySelector(
-    'input[name="TipoOrden"][value="domicilio"]'
-  );
+  var tipoOrdenDomicilio = document.querySelector('input[name="TipoOrden"][value="domicilio"]');
   var direccion = document.querySelector("#input_Direccion").value;
+
   if (tipoOrdenDomicilio.checked && !direccion.trim()) {
     alert("Por favor, ingresa la dirección de entrega.");
     return false;
   }
-  var tipoOrdenRecoger = document.querySelector(
-    'input[name="TipoOrden"][value="recoger"]'
-  );
+
+  var tipoOrdenRecoger = document.querySelector('input[name="TipoOrden"][value="recoger"]');
+
   if (tipoOrdenDomicilio.checked) {
     // Obtén la información necesaria del pedido
     const valuetipoOrden = tipoOrdenDomicilio.value.trim();
     const valuedireccion = direccion.trim();
-    const valuemetodo = document
-      .querySelector('input[name="Metodo"]:checked')
-      .value.trim();
-    const valuesubtotal = parseFloat(
-      document.querySelector(".Subtotal span").textContent
-    );
-    const valuetotal = parseFloat(
-      document.querySelector(".Total span").textContent
-    );
+    const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
+    const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
+    const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
 
     // Crea un objeto con la información del pedido
     const pedido = {
@@ -117,15 +104,9 @@ function validarFormulario() {
   if (tipoOrdenRecoger.checked) {
     // Obtén la información necesaria del pedido
     const valuetipoOrden = tipoOrdenRecoger.value.trim();
-    const valuemetodo = document
-      .querySelector('input[name="Metodo"]:checked')
-      .value.trim();
-    const valuesubtotal = parseFloat(
-      document.querySelector(".Subtotal span").textContent
-    );
-    const valuetotal = parseFloat(
-      document.querySelector(".Total span").textContent
-    );
+    const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
+    const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
+    const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
 
     // Crea un objeto con la información del pedido
     const pedido = {
@@ -149,45 +130,44 @@ function validarFormulario() {
 }
 
 function enviarPedidoAlServidor(pedido, cuenta) {
-  // // Crea un objeto XMLHttpRequest
-  // var xhr = new XMLHttpRequest();
+  // Crea un objeto XMLHttpRequest
+  var xhr = new XMLHttpRequest();
 
-  // // Configura la solicitud
-  // xhr.open("POST", "../PHP/guardar_pedido.php", true);
-  // xhr.setRequestHeader("Content-Type", "application/json");
+  // Configura la solicitud
+  xhr.open("POST", "../../PHP/guardar_pedido.php", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
 
-  // // Combina la información del pedido y la cuenta en un solo objeto
-  // var data = {
-  //   pedido: pedido,
-  //   cuenta: cuenta,
-  // };
+  // Combina la información del pedido y la cuenta en un solo objeto
+  var data = {
+    pedido: pedido,
+    cuenta: cuenta,
+  };
 
-  // console.log(data);
+  console.log(data);
 
-  // // Convierte el objeto combinado a formato JSON
-  // var jsonData = JSON.stringify(data);
+  // Convierte el objeto combinado a formato JSON
+  var jsonData = JSON.stringify(data);
 
-  // console.log(jsonData);
+  console.log(jsonData);
 
-  // // Configura la función de devolución de llamada cuando la solicitud se complete
-  // xhr.onreadystatechange = function () {
-  //   if (/*xhr.readyState == 4 &&*/ xhr.status === 200) {
-  //     //     var r = xhr.responseText;
-  //     //     if (r == 1) {
-  //     //         confirm("Agregado con éxito!!!");
-  //     //     } else {
-  //     //         alert("Fallo al agregar :(");
-  //     //     }
-  //     // }
-  //     // La solicitud fue exitosa
-  //     console.log("Pedido enviado con éxito");
-  //   } else {
-  //     // Hubo un error en la solicitud
-  //     console.error("Error al enviar el pedido");
-  //   }
-  // };
+  // Configura la función de devolución de llamada cuando la solicitud se complete
+  xhr.onreadystatechange = function () {
+    if (/*xhr.readyState == 4 &&*/ xhr.status === 200) {
+      //     var r = xhr.responseText;
+      //     if (r == 1) {
+      //         confirm("Agregado con éxito!!!");
+      //     } else {
+      //         alert("Fallo al agregar :(");
+      //     }
+      // }
+      // La solicitud fue exitosa
+      console.log("Pedido enviado con éxito");
+    } else {
+      // Hubo un error en la solicitud
+      console.error("Error al enviar el pedido");
+    }
+  };
 
-  // // Envía la solicitud con los datos JSON combinados
-  // xhr.send(jsonData);
-  alert("El pedido se envió correctamente.");
+  // Envía la solicitud con los datos JSON combinados
+  xhr.send(jsonData);
 }

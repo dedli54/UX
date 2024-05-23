@@ -64,14 +64,13 @@ function validarFormulario() {
   }
   // Validar la dirección si se selecciona "A domicilio"
   var tipoOrdenDomicilio = document.querySelector('input[name="TipoOrden"][value="domicilio"]');
+  var tipoOrdenRecoger = document.querySelector('input[name="TipoOrden"][value="recoger"]');
   var direccion = document.querySelector("#input_Direccion").value;
 
   if (tipoOrdenDomicilio.checked && !direccion.trim()) {
     alert("Por favor, ingresa la dirección de entrega.");
     return false;
   }
-
-  var tipoOrdenRecoger = document.querySelector('input[name="TipoOrden"][value="recoger"]');
 
   if (tipoOrdenDomicilio.checked) {
     // Obtén la información necesaria del pedido
@@ -83,7 +82,7 @@ function validarFormulario() {
 
     // Crea un objeto con la información del pedido
     const pedido = {
-      tipoOrdenDomicilio: valuetipoOrden,
+      tipoOrden: valuetipoOrden,
       direccion: valuedireccion,
       metodopago: valuemetodo,
       subtotal: valuesubtotal,
@@ -96,46 +95,42 @@ function validarFormulario() {
     const cuenta = cuentaStorage.slice(0, -1);
 
     // Envia la información del pedido al servidor
-    enviarPedidoAlServidor(pedido, cuenta);
-    localStorage.clear();
-    return true;
-  }
-
-  if (tipoOrdenRecoger.checked) {
-    // Obtén la información necesaria del pedido
-    const valuetipoOrden = tipoOrdenRecoger.value.trim();
-    const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
-    const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
-    const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
-
-    // Crea un objeto con la información del pedido
-    const pedido = {
-      tipoOrdenRecoger: valuetipoOrden,
-      direccion: "Sin Direccion",
-      metodopago: valuemetodo,
-      subtotal: valuesubtotal,
-      total: valuetotal,
-    };
-
-    // Obtén la información del carrito desde el localStorage
-    const cuentaStorage = JSON.parse(localStorage.getItem("carrito")) || [];
-    // Filtra el carrito para excluir el último elemento (total)
-    const cuenta = cuentaStorage.slice(0, -1);
-
-    // Envia la información del pedido al servidor
-    enviarPedidoAlServidor(pedido, cuenta);
+    enviarPedidoAlServidor(pedido, cuenta)
     localStorage.clear();
     return true;
   }
 }
 
+if (tipoOrdenRecoger.checked) {
+  // Obtén la información necesaria del pedido
+  const valuetipoOrden = tipoOrdenRecoger.value.trim();
+  const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
+  const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
+  const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
+
+  // Crea un objeto con la información del pedido
+  const pedido = {
+    tipoOrden: valuetipoOrden,
+    direccion: "Sin Direccion",
+    metodopago: valuemetodo,
+    subtotal: valuesubtotal,
+    total: valuetotal,
+  };
+
+  // Obtén la información del carrito desde el localStorage
+  const cuentaStorage = JSON.parse(localStorage.getItem("carrito")) || [];
+  // Filtra el carrito para excluir el último elemento (total)
+  const cuenta = cuentaStorage.slice(0, -1);
+
+  // Envia la información del pedido al servidor
+  enviarPedidoAlServidor(pedido, cuenta)
+  localStorage.clear();
+  return true;
+}
+
 function enviarPedidoAlServidor(pedido, cuenta) {
   // Crea un objeto XMLHttpRequest
   var xhr = new XMLHttpRequest();
-
-  // Configura la solicitud
-  xhr.open("POST", "../../PHP/guardar_pedido.php", true);
-  xhr.setRequestHeader("Content-Type", "application/json");
 
   // Combina la información del pedido y la cuenta en un solo objeto
   var data = {
@@ -143,30 +138,17 @@ function enviarPedidoAlServidor(pedido, cuenta) {
     cuenta: cuenta,
   };
 
-  console.log(data);
-
-  // Convierte el objeto combinado a formato JSON
-  var jsonData = JSON.stringify(data);
-
-  console.log(jsonData);
+  // Configura la solicitud
+  xhr.open("POST", "../PHP/guardar_pedido.php", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
 
   // Configura la función de devolución de llamada cuando la solicitud se complete
   xhr.onreadystatechange = function () {
-    if (/*xhr.readyState == 4 &&*/ xhr.status === 200) {
-      //     var r = xhr.responseText;
-      //     if (r == 1) {
-      //         confirm("Agregado con éxito!!!");
-      //     } else {
-      //         alert("Fallo al agregar :(");
-      //     }
-      // }
-      // La solicitud fue exitosa
-      console.log("Pedido enviado con éxito");
-    } else {
-      // Hubo un error en la solicitud
-      console.error("Error al enviar el pedido");
+    if (xhr.readyState == 4 && xhr.status === 200) {
+      alert("Pedido enviado de manera satisfactoria!");
     }
   };
+  var jsonData = JSON.stringify(data);
 
   // Envía la solicitud con los datos JSON combinados
   xhr.send(jsonData);

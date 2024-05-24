@@ -52,39 +52,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const listaItems = document.querySelector("#carrito_lista");
 
     // Recorrer cada item en el carrito y construir la interfaz
-    carrito.forEach((item, index) => {
-      if (carrito.length - 1 != index) {
-        // Crear un nuevo div para el item
-        const nuevoItem = document.createElement("div");
-        nuevoItem.classList.add("itemCarrito");
+    if (carrito.length !== 0) {
+      carrito.forEach((item, index) => {
+        if (carrito.length - 1 != index) {
+          // Crear un nuevo div para el item
+          const nuevoItem = document.createElement("div");
+          nuevoItem.classList.add("itemCarrito");
 
-        let contenidoItem;
-        // Construir el contenido del item (puedes ajustar esto según tus necesidades)
-        if ("papas" in item) {
-          contenidoItem = `<p class="itemNombre">${item.nombre}
-                          <span class="itemprecio">${item.precio.toFixed(2)}</span></p>
-                          <p class="itempapas">${item.papas}</p>
-                          <p class="itembebida">${item.bebida}</p>
-                          <p class="itemcantidad">Cantidad: 
-                          <span class="itemcannum">${item.cantidad}</span></p>
-                          <button type="button" class="botonEliminar">Eliminar</button>`;
+          let contenidoItem;
+          // Construir el contenido del item (puedes ajustar esto según tus necesidades)
+          if ("papas" in item) {
+            contenidoItem = `<p class="itemNombre">${item.nombre}
+                            <span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+                            <p class="itempapas">${item.papas}</p>
+                            <p class="itembebida">${item.bebida}</p>
+                            <p class="itemcantidad">Cantidad: 
+                            <span class="itemcannum">${item.cantidad}</span></p>
+                            <button type="button" class="botonEliminar">Eliminar</button>`;
+          } else {
+            contenidoItem = `<p class="itemNombre">${item.nombre}
+                             <span class="itemprecio">${item.precio.toFixed(2)}</span></p>
+                             <p class="itembebida">${item.bebida}</p>
+                             <p class="itemcantidad">Cantidad: 
+                             <span class="itemcannum">${item.cantidad}</span></p>
+                             <button type="button" class="botonEliminar">Eliminar</button>`;
+          }
+          // Agregar el contenido al nuevo item
+          nuevoItem.innerHTML = contenidoItem;
+
+          // Agregar el nuevo item a la lista de items
+          listaItems.appendChild(nuevoItem);
         } else {
-          contenidoItem = `<p class="itemNombre">${item.nombre}
-                           <span class="itemprecio">${item.precio.toFixed(2)}</span></p>
-                           <p class="itembebida">${item.bebida}</p>
-                           <p class="itemcantidad">Cantidad: 
-                           <span class="itemcannum">${item.cantidad}</span></p>
-                           <button type="button" class="botonEliminar">Eliminar</button>`;
+          return; // Salir del bucle
         }
-        // Agregar el contenido al nuevo item
-        nuevoItem.innerHTML = contenidoItem;
-
-        // Agregar el nuevo item a la lista de items
-        listaItems.appendChild(nuevoItem);
-      } else {
-        return; // Salir del bucle
-      }
-    });
+      });
+    }
 
     // Obtener el último elemento del carrito (que contiene el subtotal)
     const Total = carrito[carrito.length - 1].CarritoTotal;

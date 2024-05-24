@@ -36,6 +36,7 @@
         <div class="Menu">
             <nav id="menu">
                 <ul>
+                    <li><a id="liamaspedido" href="#MasPedido">Lo Más Pedido por Ti</a></li>
                     <li><a href="#MasPopulares">Más Populares</a></li>
                     <li><a href="#Entradas">Entradas</a></li>
                     <li><a href="#Platillos">Platillos</a></li>
@@ -46,9 +47,9 @@
     </header>
     <div class="wrapper">
         <div class="MenuPrincipal ">
-            <div class="contenedor_seccion">
-                <section class="MasPopulares" id="MasPopulares">
-                    <h1>Más Populares</h1>
+            <div class="contenedor_seccion" id="divmaspedido">
+                <section class="MasPedido" id="MasPedido">
+                    <h1>Lo Más Pedido por Ti</h1>
                     <div class="contenedor_producto producto" data-item="1"> <!-- Flautas -->
                         <img class="imagen_producto" src="../Imagenes/Flautas.jpeg" alt="Flautas">
                         <div class="producto_info">
@@ -142,32 +143,89 @@
                             </div>
                         </div>
                     </section>
-                    <div class="contenedor_producto producto" data-item="3"> <!-- Papitas Doradas -->
-                        <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="papa dorada">
+                </section>
+            </div>
+            <div class="contenedor_seccion">
+                <section class="MasPopulares" id="MasPopulares">
+                    <h1>Más Populares</h1>
+                    <div class="contenedor_producto producto" data-item="1"> <!-- Flautas -->
+                        <img class="imagen_producto" src="../Imagenes/Flautas.jpeg" alt="Flautas">
                         <div class="producto_info">
-                            <h2 class="producto_nombre">Papitas Doradas</h2>
-                            <p class="descripcion_producto">Riquísimas con salsa de aguacate</p>
+                            <h2 class="producto_nombre">Flautas</h2>
+                            <p class="descripcion_producto">Con crema y bañadas con salsa de aguacate. Orden de 5 piezas.</p>
                         </div>
-                        <p class="precio_producto">Precio: $56.00</p>
+                        <p class="precio_producto">Precio: $238.00</p>
                     </div>
-                    <section class="modal modal-item" data-item="3">
+                    <section class="modal modal-item" data-item="1">
                         <div class="modal__container">
                             <h2 class="modal__title">Nombre</h2>
-                            <p class="modal__paragraph">Lorem ipsum </p>
+                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
+                                quas,
+                                culpa tempora. Veniam consectetur deleniti maxime.
+                            </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
+                                    <label for="pedidoForm">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
+                                        <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
                                         <li><input type="radio" name="papas" value="con_aguacate"> Extra de Salsa de Aguacate ($18)</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea Incrementar el Tamaño?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Orden Familiar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
+                                    </ol>
+                                </div>
+                            </form>
+                            <div id="resultado">
+                                <h3>Precio: $<span id="total">0.00</span></h3>
+                            </div>
+                            <div class="modal__button-container">
+                                <button class="modal__close">Cancelar</button>
+                                <button class="button_cantidad menos">-</button>
+                                <span id="cantidad">1</span>
+                                <button class="button_cantidad mas">+</button>
+                                <button class="modal__add" id="agregarAlCarrito">Agregar</button>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="contenedor_producto producto" data-item="2"> <!-- Enchiladas -->
+                        <img class="imagen_producto" src="../Imagenes/enchiladas.jpeg" alt="enchiladas">
+                        <div class="producto_info">
+                            <h2 class="producto_nombre">Enchiladas</h2>
+                            <p class="descripcion_producto"> Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas.</p>
+                        </div>
+                        <p class="precio_producto">Precio: $194.00</p>
+                    </div>
+                    <section class="modal modal-item" data-item="2">
+                        <div class="modal__container">
+                            <h2 class="modal__title">Nombre</h2>
+                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
+                                quas,
+                                culpa tempora. Veniam consectetur deleniti maxime.
+                            </p>
+                            <form id="pedidoForm">
+                                <div class="form-group opciones_papas">
+                                    <label for="form-group opciones_papas">¿Desea Cebolla en sus Enchiladas?</label>
+                                    <ol class="opciones">
+                                        <li><input type="radio" name="papas" value="Cebolla"> Con Cebolla</li>
+                                        <li><input type="radio" name="papas" value="Sin_Cebolla"> Sin Cebolla</li>
+                                    </ol>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-group">¿Desea Bebida?</label>
+                                    <ol class="opciones">
+                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-Cola-Light"> Coca-Cola Light ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-cola-sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -617,6 +675,7 @@
     <script src="../JS/JS_IndexTaqueria/JqueryIndexTaqueria.js"></script>
     <script src="../JS/JS_IndexTaqueria/DespliegueHeaderTaqueria.js"></script>
     <script src="../JS/JS_IndexTaqueria/ModalesFuncionamientoTaqueria.js"></script>
+    <script src="../JS/JS_IndexTaqueria/MostrarMisMasPedidosTaqueria.js"></script>
 </body>
 
 </html>

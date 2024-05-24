@@ -72,7 +72,9 @@ header #opciones a {
   border-radius: 5px;
 }
 
-#message {
+#message-telefono,
+#message-nombre,
+#message-correo {
   font-size: 12px;
   display: none;
 }

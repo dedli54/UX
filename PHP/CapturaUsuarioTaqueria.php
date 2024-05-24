@@ -23,7 +23,7 @@ if ($conexion) {
         if (mysqli_num_rows($validarCorreo) > 0) {
             echo '
             <script>
-                alert("Ya hay un usuario registrado con ese correo electronico!");
+                alert("Ya hay un usuario registrado con ese correo electrónico!");
                 window.location = "../HTML/InicioSesionTaqueria.php";
             </script>
             ';
@@ -56,7 +56,7 @@ if ($conexion) {
         echo "Faltan datos en el formulario.";
     }
 } else {
-    echo "FALLO DE CONEXIÓN";
+    echo "FALLÓ DE CONEXIÓN";
     echo '
     <script>
         window.location = "../HTML/RegistroTaqueria.php";

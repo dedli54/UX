@@ -1,3 +1,4 @@
+DROP DATABASE taqueriajuarezdb;
 CREATE DATABASE taqueriajuarezdb;
 USE taqueriajuarezdb;
 CREATE TABLE `taqueriajuarezdb`.`tablausuarios` (
@@ -25,7 +26,7 @@ VALUES (
     8115146651,
     '1999-06-29',
     '1234561!'
-  )
+  );
 SELECT *
 FROM tablausuarios;
 CREATE TABLE `taqueriajuarezdb`.`tablaproductos` (
@@ -99,7 +100,7 @@ VALUES (
     'D:/XAMPP/htdocs/UX/Imagenes/plato.jpeg',
     255.00,
     'Combo'
-  )
+  );
 SELECT *
 FROM tablaproductos;
 CREATE TABLE `taqueriajuarezdb`.`tablapedidos` (

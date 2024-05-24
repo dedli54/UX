@@ -315,7 +315,7 @@ function actualizarTotalCarrito() {
 
   // Muestra el mensaje si el carrito está vacío
   if (itemsCarrito.length === 0) {
-    carritoLista.innerHTML = '<div id="cuadro" style="padding: 0px; text-align: center;"><p id="mensajevacio" >Carrito sin productos</p></div>';
+    carritoLista.innerHTML = '<div id="cuadro" style="padding: 0px; text-align: center;"><p id="mensajevacio" >Carrito Sin Productos</p></div>';
   } else {
     const mensajeVacio = document.getElementById("cuadro");
     if (mensajeVacio) {

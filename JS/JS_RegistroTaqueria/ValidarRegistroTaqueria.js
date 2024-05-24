@@ -78,10 +78,13 @@ function checkDate() {
   var fecha = document.getElementById("fecha-nacimiento");
   var message = document.getElementById("message-fecha");
   var fechaActual = new Date();
+  fechaActual.setHours(0, 0, 0, 0);
 
   if (fecha.value !== "") {
     var fecha2 = new Date(fecha.value);
-    if (fecha2 < fechaActual) {
+    fecha2.setHours(0, 0, 0, 0);
+    fecha2.setDate(fecha2.getDate() + 1);
+    if (fecha2 >= fechaActual) {
       encender(message, fecha);
       return false;
     } else {

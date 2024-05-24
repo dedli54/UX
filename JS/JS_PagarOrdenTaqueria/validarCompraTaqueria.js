@@ -62,9 +62,20 @@ function validarFormulario() {
     alert("Por favor, ingresa un número de teléfono válido.");
     return false;
   }
+  if (!checkName()) {
+    alert("Por favor, ingresa un nombre válido.");
+    return false;
+  }
+  if (!checkCorreo()) {
+    alert("Por favor, ingresa un correo válido.");
+    return false;
+  }
   // Validar la dirección si se selecciona "A domicilio"
   var tipoOrdenDomicilio = document.querySelector('input[name="TipoOrden"][value="domicilio"]');
   var tipoOrdenRecoger = document.querySelector('input[name="TipoOrden"][value="recoger"]');
+  var telefono = document.querySelector("#telefono").value;
+  var nombre = document.querySelector("#nombres").value;
+  var correo = document.querySelector("#correo").value;
   var direccion = document.querySelector("#input_Direccion").value;
 
   if (tipoOrdenDomicilio.checked && !direccion.trim()) {
@@ -75,6 +86,9 @@ function validarFormulario() {
   if (tipoOrdenDomicilio.checked) {
     // Obtén la información necesaria del pedido
     const valuetipoOrden = tipoOrdenDomicilio.value.trim();
+    const valuetelefono = telefono.trim();
+    const valuenombre = nombre.trim();
+    const valuecorreo = correo.trim();
     const valuedireccion = direccion.trim();
     const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
     const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
@@ -82,6 +96,9 @@ function validarFormulario() {
 
     // Crea un objeto con la información del pedido
     const pedido = {
+      telefono: valuetelefono,
+      nombre: valuenombre,
+      correo: valuecorreo,
       tipoOrden: valuetipoOrden,
       direccion: valuedireccion,
       metodopago: valuemetodo,
@@ -97,35 +114,43 @@ function validarFormulario() {
     // Envia la información del pedido al servidor
     enviarPedidoAlServidor(pedido, cuenta)
     localStorage.clear();
+    alert("El pedido se envió satisfactoriamente!");
     return true;
   }
-}
 
-if (tipoOrdenRecoger.checked) {
-  // Obtén la información necesaria del pedido
-  const valuetipoOrden = tipoOrdenRecoger.value.trim();
-  const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
-  const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
-  const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
+  if (tipoOrdenRecoger.checked) {
+    // Obtén la información necesaria del pedido
+    const valuetipoOrden = tipoOrdenRecoger.value.trim();
+    const valuetelefono = telefono.trim();
+    const valuenombre = nombre.trim();
+    const valuecorreo = correo.trim();
+    const valuemetodo = document.querySelector('input[name="Metodo"]:checked').value.trim();
+    const valuesubtotal = parseFloat(document.querySelector(".Subtotal span").textContent);
+    const valuetotal = parseFloat(document.querySelector(".Total span").textContent);
 
-  // Crea un objeto con la información del pedido
-  const pedido = {
-    tipoOrden: valuetipoOrden,
-    direccion: "Sin Direccion",
-    metodopago: valuemetodo,
-    subtotal: valuesubtotal,
-    total: valuetotal,
-  };
+    // Crea un objeto con la información del pedido
+    const pedido = {
+      telefono: valuetelefono,
+      nombre: valuenombre,
+      correo: valuecorreo,
+      tipoOrden: valuetipoOrden,
+      direccion: "Sin Dirección",
+      metodopago: valuemetodo,
+      subtotal: valuesubtotal,
+      total: valuetotal,
+    };
 
-  // Obtén la información del carrito desde el localStorage
-  const cuentaStorage = JSON.parse(localStorage.getItem("carrito")) || [];
-  // Filtra el carrito para excluir el último elemento (total)
-  const cuenta = cuentaStorage.slice(0, -1);
+    // Obtén la información del carrito desde el localStorage
+    const cuentaStorage = JSON.parse(localStorage.getItem("carrito")) || [];
+    // Filtra el carrito para excluir el último elemento (total)
+    const cuenta = cuentaStorage.slice(0, -1);
 
-  // Envia la información del pedido al servidor
-  enviarPedidoAlServidor(pedido, cuenta)
-  localStorage.clear();
-  return true;
+    // Envia la información del pedido al servidor
+    enviarPedidoAlServidor(pedido, cuenta)
+    localStorage.clear();
+    alert("El pedido se envió satisfactoriamente!");
+    return true;
+  }
 }
 
 function enviarPedidoAlServidor(pedido, cuenta) {
@@ -145,7 +170,7 @@ function enviarPedidoAlServidor(pedido, cuenta) {
   // Configura la función de devolución de llamada cuando la solicitud se complete
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status === 200) {
-      alert("Pedido enviado de manera satisfactoria!");
+      console.log("Pedido enviado de manera satisfactoria!");
     }
   };
   var jsonData = JSON.stringify(data);

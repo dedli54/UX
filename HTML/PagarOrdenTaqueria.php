@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <?php
+    include '../PHP/ValidarSesionTaqueria.php';
+    ?>
     <header>
         <nav id="opciones">
             <input type="button" value="Regresar" onclick="history.go(-1)" style="background-color: #1d5635; color: black; border-radius: 5px; padding-left: 10px; padding-right: 10px;" onmouseover="this.style.backgroundColor='#c5b198'" onmouseout="this.style.backgroundColor='#1d5635'">
@@ -26,19 +29,31 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="telefono">Confirmar Teléfono</label>
-                            <input type="text" id="telefono" name="telefono" oninput="ValidarTelefono()" value="">
-                            <p id="message">Verifique que el telefono sea válido.</p>
+                            <input type="text" id="telefono" name="telefono" oninput="ValidarTelefono()" value="<?php if ($usuario_autenticado) : echo $_SESSION['telefono_usuario']; endif;?>">
+                            <p id="message-telefono">Verifique que el telefono sea válido.</p>
                         </div>
                         <hr class="mb-4">
                         <div class="form-group">
-                            <label for="domicilio">Tipo de orden</label><br>
+                            <label for="nombre">Confirmar Nombre</label>
+                            <input type="text" id="nombres" name="nombres" oninput="checkName()" value="<?php if ($usuario_autenticado) : echo $_SESSION['nombres_usuario']; endif;?>">
+                            <p id="message-nombre">Verifique que el nombre sea válido.</p>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="form-group">
+                            <label for="nombre">Confirmar Correo Electrónico</label>
+                            <input type="text" id="correo" name="correo" oninput="checkCorreo()" value="<?php if ($usuario_autenticado) : echo $_SESSION['correo_usuario']; endif;?>">
+                            <p id="message-correo">Verifique que el correo sea válido.</p>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="form-group">
+                            <label for="domicilio">Tipo de Orden</label><br>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" id="domicilio" type="radio" name="TipoOrden" value="domicilio" checked onchange="toggleDireccionVisibility()">
-                                <label class="form-check-label" for="domicilio">A domicilio (+$30)</label>
+                                <label class="form-check-label" for="domicilio">A Domicilio (+$30)</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" id="recoger" type="radio" name="TipoOrden" value="recoger" onchange="toggleDireccionVisibility()">
-                                <label class="form-check-label" for="recoger">Para recoger</label>
+                                <label class="form-check-label" for="recoger">Para Recoger</label>
                             </div>
                         </div>
                         <!-- Div que se ocultará/mostrará -->
@@ -46,9 +61,10 @@
                             <label for="input_Direccion">Dirección</label>
                             <input type="text" id="input_Direccion" class="">
                         </div>
-                        <hr class="mb-4">
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label for="efectivo">Método de pago</label><br>
+                            <label for="efectivo">Método de Pago</label><br>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" id="efectivo" type="radio" name="Metodo" value="efectivo" checked>
                                 <label class="form-check-label" for="efectivo">Efectivo</label>
@@ -58,8 +74,7 @@
                                 <label class="form-check-label" for="terminal">Transferencia</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                        <hr class="mb-4">
                         <div class="form-group">
                             <label>Cuenta</label>
                             <div class="ListaItems">
@@ -73,6 +88,7 @@
                     </div>
                 </div>
             </form>
+            <hr class="mb-4">
         </div>
     </div>
 
@@ -87,16 +103,16 @@
                 </div>
             </div>
             <div class="footer_box">
-                <h3>Encuentranos en:</h3>
+                <h3>Encuéntranos en:</h3>
                 <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
                 <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
                 <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
             </div>
             <div class="footer_box">
-                <h3>Direccion:</h3>
+                <h3>Dirección:</h3>
                 <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
                 <br>
-                <h3>Telefono:</h3>
+                <h3>Teléfono:</h3>
                 <p>81-8340-1956</p>
                 <h3>Correo:</h3>
                 <p>taqueria-juarez@prodigy.net.mx</p>

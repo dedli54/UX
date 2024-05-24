@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/RegistroTaqueria.css">
-    <title>Taqueria Juarez | Registro</title>
+    <title>Taquería Juárez | Registro</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <nav id="opciones">
             <input type="button" value="Regresar" onclick="history.go(-1)">
             <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png" alt="logo" /></a>
-            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
+            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesión</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
 
         </nav>
@@ -38,7 +38,7 @@
                     <p id="message-apellido">Favor de ingresar un apellido válido.</p>
                 </div>
                 <div class="form-group">
-                    <label for="correo">Correo Electronico:</label>
+                    <label for="correo">Correo Electrónico:</label>
                     <input type="text" id="correo" name="correo" oninput="checkCorreo()" required>
                     <br>
                     <p id="message-correo">Favor de ingresar un correo válido.</p>
@@ -47,7 +47,7 @@
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono" oninput="checkTel()" required>
                     <br>
-                    <p id="message-telefono">Favor de ingresar un telefono válido.</p>
+                    <p id="message-telefono">Favor de ingresar un teléfono válido.</p>
                 </div>
                 <div class="form-group">
                     <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
@@ -85,17 +85,17 @@
             </div>
 
             <div class="footer_box">
-                <h3>Encuentranos en:</h3>
+                <h3>Encuéntranos en:</h3>
                 <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
                 <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
                 <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
             </div>
 
             <div class="footer_box">
-                <h3>Direccion:</h3>
+                <h3>Dirección:</h3>
                 <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
                 <br>
-                <h3>Telefono:</h3>
+                <h3>Teléfono:</h3>
                 <p>81-8340-1956</p>
 
                 <h3>Correo:</h3>

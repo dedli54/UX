@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Taqueria Juarez | Menu</title>
+    <title>Taquería Juárez | Menú</title>
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/IndexTaqueria.css">
 </head>
@@ -20,16 +20,16 @@
                 <li class="_2">ENCHILADAS</li>
                 <li class="_3">FLAUTAS</li>
                 <li class="_4">SOPES</li>
-                <li class="_5">& MAS</li>
+                <li class="_5">& MÁS</li>
             </ul>
         </div>
         <nav id="opciones">
             <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png" alt="logo"></a>
             <?php if ($usuario_autenticado) : ?>
                 <a>Bienvenido: <?php echo $_SESSION['nombres_usuario']; ?></a>
-                <a href="../PHP/CerrarSesionTaqueria.php">Cerrar Sesion</a>
+                <a href="../PHP/CerrarSesionTaqueria.php">Cerrar Sesión</a>
             <?php else : ?>
-                <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
+                <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesión</a>
                 <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
             <?php endif; ?>
         </nav>
@@ -589,21 +589,21 @@
                 </div>
                 <div class="terminos">
                     <p>Empleamos para su preparación, ingredientes frescos dignos de deleitar el paladar de toda la familia,
-                        por ello también contamos con instalaciones que le harán sentir tan cómodo como si estuviera en casa
+                        por ello también contamos con instalaciones que le harán sentir tan cómodo como si estuviera en casa.
                     </p>
                 </div>
             </div>
             <div class="footer_box">
-                <h3>Encuentranos en:</h3>
+                <h3>Encuéntranos en:</h3>
                 <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
                 <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
                 <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
             </div>
             <div class="footer_box">
-                <h3>Direccion:</h3>
+                <h3>Dirección:</h3>
                 <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
                 <br>
-                <h3>Telefono:</h3>
+                <h3>Teléfono:</h3>
                 <p>81-8340-1956</p>
                 <h3>Correo:</h3>
                 <p>taqueria-juarez@prodigy.net.mx</p>

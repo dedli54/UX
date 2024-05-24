@@ -1,19 +1,13 @@
 <?php
-// Iniciar sesión
-session_start();
-
-// Verificar si el usuario ha iniciado sesión y si hay información de teléfono
-if (isset($_SESSION["nombres_usuario"]) && isset($_SESSION["telefono_usuario"]) && isset($_SESSION["id_usuario"])) {
-    $nombres_usuario = $_SESSION["nombres_usuario"];
-    $correo_usuario = $_SESSION["correo_usuario"];
-    $telefono_usuario = $_SESSION["telefono_usuario"];
-}
 // Conecta con la base de datos
 $conexion = mysqli_connect("localhost", "root", "", "taqueriajuarezdb");
 
 // Obtiene los datos del pedido y la cuenta desde la solicitud POST
 $data = json_decode(file_get_contents("php://input"), true);
 
+$telefono = $data['pedido']['telefono'];
+$nombre = $data['pedido']['nombre'];
+$correo = $data['pedido']['correo'];
 $tipoOrden = $data['pedido']['tipoOrden'];
 $direccion = $data['pedido']['direccion'];
 $metodopago = $data['pedido']['metodopago'];
@@ -21,7 +15,7 @@ $subtotal = $data['pedido']['subtotal'];
 $total = $data['pedido']['total'];
 // Inserta los datos del pedido en la tabla 'pedido'
 $insertarPedido = mysqli_query($conexion, "INSERT INTO tablapedidos(correo_usuario_pedido,nombre_usuario_pedido,telefono_usuario_pedido,tipo_orden_pedido,direccion_pedido,metodo_pago_pedido,subtotal_pedido,total_pedido) 
-VALUES ('$correo_usuario', '$nombres_usuario', $telefono_usuario, '$tipoOrden', '$direccion', '$metodopago', $subtotal, $total)");
+VALUES ('$correo', '$nombre', $telefono, '$tipoOrden', '$direccion', '$metodopago', $subtotal, $total)");
 
 // Obtiene el ID del pedido recién insertado
 $idPedido = $conexion->insert_id;

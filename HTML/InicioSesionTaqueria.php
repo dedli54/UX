@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Librerias/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/InicioSesionTaqueria.css">
-    <title>Taquer&iacute;a Juarez | Inicio de sesion</title>
+    <title>Taquería Juárez | Inicio de sesión</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
             <input type="button" value="Regresar" onclick="history.go(-1)">
 
             <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png" alt="logo" /></a>
-            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesion</a>
+            <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesión</a>
             <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
 
         </nav>
@@ -25,10 +25,10 @@
 
     <div class="container">
         <div class="form-box">
-            <h2>Iniciar Sesion</h2>
+            <h2>Iniciar Sesión</h2>
             <form action="../PHP/IniciarSesionTaqueria.php" method="POST">
                 <div class="form-group">
-                    <label for="correo">Correo Electronico:</label>
+                    <label for="correo">Correo Electrónico:</label>
                     <input type="text" id="correo" name="correo" required>
                 </div>
                 <div class="form-group">
@@ -53,17 +53,17 @@
         </div>
 
         <div class="footer_box">
-            <h3>Encuentranos en:</h3>
+            <h3>Encuéntranos en:</h3>
             <a id="_1" href="https://www.facebook.com/taqueriajuarezmx/">Facebook</a>
             <a id="_2" href="https://www.instagram.com/taqueria_juarez/">Instagram</a>
             <a id="_3" href="https://www.ubereats.com/mx-en/store/taqueria-juarez-centro/JU1Fo75wQyCK6QNwIt7AJQ">Uber Eats</a>
         </div>
 
         <div class="footer_box">
-            <h3>Direccion:</h3>
+            <h3>Dirección:</h3>
             <p>Galeana Nte 123<br>Centro, Monterrey, Nuevo León 64000</p>
             <br>
-            <h3>Telefono:</h3>
+            <h3>Teléfono:</h3>
             <p>81-8340-1956</p>
 
             <h3>Correo:</h3>

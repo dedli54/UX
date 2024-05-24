@@ -17,7 +17,7 @@ if ($conexion) {
         if (mysqli_num_rows($validarCorreoContra) == 0) {
             echo '
             <script>
-                alert("Verifice sus credenciales y vuelta a intentar!");
+                alert("Verifique sus credenciales y vuelta a intentar!");
                 window.location = "../HTML/InicioSesionTaqueria.php";
             </script>
             ';
@@ -50,7 +50,7 @@ if ($conexion) {
         echo "Faltan datos en el formulario.";
     }
 } else {
-    echo "FALLO DE CONEXIÓN";
+    echo "FALLÓ DE CONEXIÓN";
     echo '
     <script>
         window.location = "../HTML/InicioSesionTaqueria.php";

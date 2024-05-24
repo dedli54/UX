@@ -61,13 +61,13 @@ VALUES (
   ),
   (
     'Papitas Doradas',
-    'Riquisima con salsa de aguacate.',
+    'Riquísimas con salsa de aguacate.',
     'D:/XAMPP/htdocs/UX/Imagenes/papadorada.jpeg',
     56.00,
     'Entrada'
   ),
   (
-    'Orden de sopes',
+    'Orden de Sopes',
     'Elige entre deshebrada, picadillo con papa, chicharrón verde y chicharrón rojo. Orden de 3 piezas.',
     'D:/XAMPP/htdocs/UX/Imagenes/sopes.jpeg',
     183.00,
@@ -88,7 +88,7 @@ VALUES (
     'Platillo'
   ),
   (
-    'Rey de la Juarez',
+    'Rey de la Juárez',
     'Platillo surtido 8 piezas. Incluye 2 Enchiladas, 2 Flautas, 2 Tacos y 2 Tostadas.',
     'D:/XAMPP/htdocs/UX/Imagenes/rey.jpeg',
     370.00,
@@ -96,7 +96,7 @@ VALUES (
   ),
   (
     'Platillo',
-    '2 enchiladas, 2 tacos y 2 flautas.',
+    '2 Enchiladas, 2 Tacos y 2 Flautas.',
     'D:/XAMPP/htdocs/UX/Imagenes/plato.jpeg',
     255.00,
     'Combo'

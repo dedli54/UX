@@ -67,7 +67,7 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="pedidoForm">¿Desea extra?</label>
+                                    <label for="pedidoForm">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
@@ -75,12 +75,12 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -114,19 +114,19 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Deseas cebolla en tus enchiladas?</label>
+                                    <label for="form-group opciones_papas">¿Desea Cebolla en sus Enchiladas?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="Cebolla"> Con Cebolla</li>
                                         <li><input type="radio" name="papas" value="Sin_Cebolla"> Sin Cebolla</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola-Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-cola-sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca-cola-sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -146,7 +146,7 @@
                         <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="papa dorada">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Papitas Doradas</h2>
-                            <p class="descripcion_producto">Riquisima con salsa de aguacate</p>
+                            <p class="descripcion_producto">Riquísimas con salsa de aguacate</p>
                         </div>
                         <p class="precio_producto">Precio: $56.00</p>
                     </div>
@@ -156,14 +156,14 @@
                             <p class="modal__paragraph">Lorem ipsum </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_aguacate"> Extra de Salsa de Aguacate ($18)</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
+                                    <label for="form-group">¿Desea Incrementar el Tamaño?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
@@ -206,14 +206,14 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_aguacate"> Extra de Zanahorias ($18)</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
+                                    <label for="form-group">¿Desea Incrementar el Tamaño?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
@@ -251,14 +251,14 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_aguacate"> Extra de Queso ($18)</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
+                                    <label for="form-group">¿Desea Incrementar el Tamaño?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
@@ -282,7 +282,7 @@
                         <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="Jana">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Papitas Doradas</h2>
-                            <p class="descripcion_producto">Riquisima con salsa de aguacate</p>
+                            <p class="descripcion_producto">Riquísimas con salsa de aguacate</p>
                         </div>
                         <p class="precio_producto">Precio: $56.00</p>
                     </div>
@@ -296,14 +296,14 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_aguacate"> Extra de Salsa de Aguacate ($18)</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea incrementar el tamaño?</label>
+                                    <label for="form-group">¿Desea Incrementar el Tamaño?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Orden para 1 Persona ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Orden para 2 Personas ($24)</li>
@@ -331,7 +331,7 @@
                     <div class="contenedor_producto producto" data-item="7"> <!-- Orden de sopes -->
                         <img class="imagen_producto" src="../Imagenes/sopes.jpeg" alt="sopes">
                         <div class="producto_info">
-                            <h2 class="producto_nombre">Orden de sopes</h2>
+                            <h2 class="producto_nombre">Orden de Sopes</h2>
                             <p class="descripcion_producto">Elige entre deshebrada, picadillo con papa, chicharrón verde y chicharrón rojo. Orden de 3 piezas</p>
                         </div>
                         <p class="precio_producto">Precio: $183.00</p>
@@ -346,7 +346,7 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">Salsa</label>
+                                    <label for="form-group opciones_papas">¿De qué Guiso Desea sus Sopes?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="rojo"> Chicharrón Rojo </li>
                                         <li><input type="radio" name="papas" value="verde"> Chicharrón Verde </li>
@@ -354,12 +354,12 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -393,7 +393,7 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
@@ -401,12 +401,12 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -440,19 +440,19 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">Las desea</label>
+                                    <label for="form-group opciones_papas">Las Desea</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="Cebolla"> Con Cebolla</li>
                                         <li><input type="radio" name="papas" value="Sin_Cebolla"> Sin Cebolla</li>
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -476,7 +476,7 @@
                     <div class="contenedor_producto producto" data-item="10"> <!-- Rey de la Juarez -->
                         <img class="imagen_producto" src="../Imagenes/rey.jpeg" alt="rey">
                         <div class="producto_info">
-                            <h2 class="producto_nombre">Rey de la Juarez</h2>
+                            <h2 class="producto_nombre">Rey de la Juárez</h2>
                             <p class="descripcion_producto">Platillo surtido 8 piezas. Incluye 2 Enchiladas, 2 Flautas, 2 Tacos y 2 Tostadas.</p>
                         </div>
                         <p class="precio_producto">Precio: $370.00</p>
@@ -491,7 +491,7 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea extra?</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
@@ -499,12 +499,12 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>
@@ -524,7 +524,7 @@
                         <img class="imagen_producto" src="../Imagenes/plato.jpeg" alt="Alitas">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Platillo</h2>
-                            <p class="descripcion_producto">2 enchiladas, 2 tacos y 2 flautas.</p>
+                            <p class="descripcion_producto">2 Enchiladas, 2 Tacos y 2 Flautas.</p>
                         </div>
                         <p class="precio_producto">Precio: $255.00</p>
                     </div>
@@ -538,7 +538,7 @@
                             </p>
                             <form id="pedidoForm">
                                 <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">Salsa</label>
+                                    <label for="form-group opciones_papas">¿Desea Extra?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
                                         <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
@@ -546,12 +546,12 @@
                                     </ol>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form-group">¿Desea bebida?</label>
+                                    <label for="form-group">¿Desea Bebida?</label>
                                     <ol class="opciones">
                                         <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
                                         <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azucar ($48)</li>
+                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
                                     </ol>
                                 </div>
                             </form>

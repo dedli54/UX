@@ -181,7 +181,7 @@
                         <img class="imagen_producto" src="../Imagenes/papadorada.jpeg" alt="Jana">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Papitas Doradas</h2>
-                            <p class="descripcion_producto">Riquísimas con salsa de aguacate</p>
+                            <p class="descripcion_producto">Riquísimas con salsa de aguacate.</p>
                         </div>
                         <p class="precio_producto">Precio: $56.00</p>
                     </div>
@@ -231,7 +231,7 @@
                         <img class="imagen_producto" src="../Imagenes/sopes.jpeg" alt="sopes">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Orden de Sopes</h2>
-                            <p class="descripcion_producto">Elige entre deshebrada, picadillo con papa, chicharrón verde y chicharrón rojo. Orden de 3 piezas</p>
+                            <p class="descripcion_producto">Elige entre deshebrada, picadillo con papa, chicharrón verde y chicharrón rojo. Orden de 3 piezas.</p>
                         </div>
                         <p class="precio_producto">Precio: $183.00</p>
                     </div>
@@ -278,7 +278,7 @@
                         <img class="imagen_producto" src="../Imagenes/Flautas.jpeg" alt="Flautas">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Flautas</h2>
-                            <p class="descripcion_producto">Con crema y bañadas con salsa de aguacate. Orden de 5 piezas</p>
+                            <p class="descripcion_producto">Con crema y bañadas con salsa de aguacate. Orden de 5 piezas.</p>
                         </div>
                         <p class="precio_producto">Precio: $238.00</p>
                     </div>
@@ -325,7 +325,7 @@
                         <img class="imagen_producto" src="../Imagenes/enchiladas.jpeg" alt="enchiladas">
                         <div class="producto_info">
                             <h2 class="producto_nombre">Enchiladas</h2>
-                            <p class="descripcion_producto">Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas</p>
+                            <p class="descripcion_producto">Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas.</p>
                         </div>
                         <p class="precio_producto">Precio: $194.00</p>
                     </div>

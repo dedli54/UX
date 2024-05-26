@@ -42,6 +42,52 @@ if ($conexion) {
                     window.location = "../HTML/InicioSesionTaqueria.php";
                 </script>
                 ';
+                $cuerpo_correo = '
+                <html lang="es">
+                        <head>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Confirmación de Registro - Taquería Juárez</title>
+                        <style>
+                            body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f7f7f7;
+                            margin: 0;
+                            padding: 0;
+                            }
+                            .container {
+                            max-width: 600px;
+                            margin: 20px auto;
+                            padding: 20px;
+                            background-color: #cab5a1;
+                            border-radius: 10px;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            }
+                            h1 {
+                            text-align: center;
+                            color: #333333;
+                            }
+                            p {
+                            margin-bottom: 20px;
+                            }
+                        </style>
+                        </head>
+                        <body>
+                        <div class="container">
+                            <h1>¡Gracias por Registrarte '.$nombres.'!</h1>
+                            <p>Bienvenido(a) a la Página Web de Taquería Juárez. Tu registro ha sido confirmado correctamente.</p>
+                            <p>Ahora podrás disfrutar de nuestras deliciosas especialidades mexicanas.</p>
+                            <p>¡Esperamos verte pronto!</p>
+                            <p>Atentamente,<br>El Equipo del Taquería Juárez.</p>
+                        </div>
+                        </body>
+                        </html>
+                ';
+                $micorreo = "migjorale@gmail.com";
+                $asunto_correo = "Confirmación Registro Taquería Juárez";
+                $headers = "MIME-Version: 1.0\r\n";
+                $headers .= "Content-type: text/html; charset=utf-8\r\n";
+                $headers .= "From: El Equipo del Taquería Juárez <$micorreo>/r/n";
+                mail($correo,$asunto_correo,$cuerpo_correo,$headers);
             } else {
                 echo "Error en el registro: " . mysqli_error($conexion);
                 echo '

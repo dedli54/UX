@@ -265,11 +265,6 @@ section[id] {
   scroll-margin-top: 100px;
 }
 
-#liamaspedido,
-#divmaspedido{
-  display: none;
-}
-
 .contenedor_producto {
   display: flex;
   align-items: center;

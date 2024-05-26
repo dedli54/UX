@@ -12,6 +12,9 @@
     <?php
     include '../PHP/ValidarSesionTaqueria.php';
     ?>
+    <?php
+    include '../PHP/MostrarFeedTaqueria.php';
+    ?>
     <header>
         <div class="Presentacion">
             <img id="Logo_G" src="../Imagenes/Juarez-logo.jpg" alt="Logo Grande">
@@ -26,18 +29,22 @@
         <nav id="opciones">
             <a href="../HTML/IndexTaqueria.php" class="RegresarInicio"><img id="Logo_p" src="../Imagenes/CerroSilla.png" alt="logo"></a>
             <?php if ($usuario_autenticado) : ?>
-                <a>Bienvenido: <?php echo $_SESSION['nombres_usuario']; ?></a>
+                <a id="aBienvenidoUsuario">Bienvenido: <?php echo $_SESSION['nombres_usuario']; ?></a>
                 <a href="../PHP/CerrarSesionTaqueria.php">Cerrar Sesión</a>
             <?php else : ?>
-                <a href="../HTML/InicioSesionTaqueria.php">Iniciar Sesión</a>
+                <a id="aIniciarSesion" href="../HTML/InicioSesionTaqueria.php">Iniciar Sesión</a>
                 <a href="../HTML/RegistroTaqueria.php">Registrarse</a>
             <?php endif; ?>
         </nav>
         <div class="Menu">
             <nav id="menu">
                 <ul>
-                    <li><a id="liamaspedido" href="#MasPedido">Lo Más Pedido por Ti</a></li>
-                    <li><a href="#MasPopulares">Más Populares</a></li>
+                    <?php if ($usuario_conFeed) : ?>
+                        <li><a id="liamaspedido" href="#MasPedido">Lo Más Pedido por Ti</a></li>
+                    <?php endif; ?>
+                    <?php if ($global_conFeed) : ?>
+                        <li><a href="#MasPopular">Más Popular</a></li>
+                    <?php endif; ?>
                     <li><a href="#Entradas">Entradas</a></li>
                     <li><a href="#Platillos">Platillos</a></li>
                     <li><a href="#Combos">Combos</a></li>
@@ -46,203 +53,37 @@
         </div>
     </header>
     <div class="wrapper">
-        <div class="MenuPrincipal ">
-            <div class="contenedor_seccion" id="divmaspedido">
-                <section class="MasPedido" id="MasPedido">
-                    <h1>Lo Más Pedido por Ti</h1>
-                    <div class="contenedor_producto producto" data-item="1"> <!-- Flautas -->
-                        <img class="imagen_producto" src="../Imagenes/Flautas.jpeg" alt="Flautas">
-                        <div class="producto_info">
-                            <h2 class="producto_nombre">Flautas</h2>
-                            <p class="descripcion_producto">Con crema y bañadas con salsa de aguacate. Orden de 5 piezas.</p>
-                        </div>
-                        <p class="precio_producto">Precio: $238.00</p>
-                    </div>
-                    <section class="modal modal-item" data-item="1">
-                        <div class="modal__container">
-                            <h2 class="modal__title">Nombre</h2>
-                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
-                                quas,
-                                culpa tempora. Veniam consectetur deleniti maxime.
-                            </p>
-                            <form id="pedidoForm">
-                                <div class="form-group opciones_papas">
-                                    <label for="pedidoForm">¿Desea Extra?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
-                                        <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
-                                        <li><input type="radio" name="papas" value="con_aguacate"> Extra de Salsa de Aguacate ($18)</li>
-                                    </ol>
-                                </div>
-                                <div class="form-group">
-                                    <label for="form-group">¿Desea Bebida?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
-                                    </ol>
-                                </div>
-                            </form>
-                            <div id="resultado">
-                                <h3>Precio: $<span id="total">0.00</span></h3>
+        <div class="MenuPrincipal">
+            <?php if ($usuario_conFeed) : ?>
+                <div class="contenedor_seccion">
+                    <section class="MasPedido" id="MasPedido">
+                        <h1>Lo Más Pedido por Ti</h1>
+                        <div class="contenedor_producto productomaspedido" id="divLoMasPedido">
+                            <img class="imagen_producto" src="<?php echo $_SESSION['imagen_producto_usuario']; ?>" alt="FeedUsuario">
+                            <div class="producto_info">
+                                <h2 class="producto_nombre"><?php echo $_SESSION['nombre_producto_usuario']; ?></h2>
+                                <p class="descripcion_producto"><?php echo $_SESSION['descripcion_producto_usuario']; ?></p>
                             </div>
-                            <div class="modal__button-container">
-                                <button class="modal__close">Cancelar</button>
-                                <button class="button_cantidad menos">-</button>
-                                <span id="cantidad">1</span>
-                                <button class="button_cantidad mas">+</button>
-                                <button class="modal__add" id="agregarAlCarrito">Agregar</button>
-                            </div>
+                            <p class="precio_producto" id="categoria_maspedido">Categoría: <?php echo $_SESSION['categoria_producto_usuario']; ?></p>
                         </div>
                     </section>
-                    <div class="contenedor_producto producto" data-item="2"> <!-- Enchiladas -->
-                        <img class="imagen_producto" src="../Imagenes/enchiladas.jpeg" alt="enchiladas">
-                        <div class="producto_info">
-                            <h2 class="producto_nombre">Enchiladas</h2>
-                            <p class="descripcion_producto"> Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas.</p>
-                        </div>
-                        <p class="precio_producto">Precio: $194.00</p>
-                    </div>
-                    <section class="modal modal-item" data-item="2">
-                        <div class="modal__container">
-                            <h2 class="modal__title">Nombre</h2>
-                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
-                                quas,
-                                culpa tempora. Veniam consectetur deleniti maxime.
-                            </p>
-                            <form id="pedidoForm">
-                                <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea Cebolla en sus Enchiladas?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="papas" value="Cebolla"> Con Cebolla</li>
-                                        <li><input type="radio" name="papas" value="Sin_Cebolla"> Sin Cebolla</li>
-                                    </ol>
-                                </div>
-                                <div class="form-group">
-                                    <label for="form-group">¿Desea Bebida?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola-Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-cola-sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
-                                    </ol>
-                                </div>
-                            </form>
-                            <div id="resultado">
-                                <h3>Precio: $<span id="total">0.00</span></h3>
+                </div>
+            <?php endif; ?>
+            <?php if ($global_conFeed) : ?>
+                <div class="contenedor_seccion">
+                    <section class="MasPopular" id="MasPopular">
+                        <h1>Más Popular</h1>
+                        <div class="contenedor_producto productomaspedido" id="divLoMasPedido"> <!-- FeedUsuario -->
+                            <img class="imagen_producto" src="<?php echo $_SESSION['imagen_producto_global']; ?>" alt="FeedUsuario">
+                            <div class="producto_info">
+                                <h2 class="producto_nombre"><?php echo $_SESSION['nombre_producto_global']; ?></h2>
+                                <p class="descripcion_producto"><?php echo $_SESSION['descripcion_producto_global']; ?></p>
                             </div>
-                            <div class="modal__button-container">
-                                <button class="modal__close">Cancelar</button>
-                                <button class="button_cantidad menos">-</button>
-                                <span id="cantidad">1</span>
-                                <button class="button_cantidad mas">+</button>
-                                <button class="modal__add" id="agregarAlCarrito">Agregar</button>
-                            </div>
+                            <p class="precio_producto" id="categoria_maspopular">Categoría: <?php echo $_SESSION['categoria_producto_global']; ?></p>
                         </div>
                     </section>
-                </section>
-            </div>
-            <div class="contenedor_seccion">
-                <section class="MasPopulares" id="MasPopulares">
-                    <h1>Más Populares</h1>
-                    <div class="contenedor_producto producto" data-item="1"> <!-- Flautas -->
-                        <img class="imagen_producto" src="../Imagenes/Flautas.jpeg" alt="Flautas">
-                        <div class="producto_info">
-                            <h2 class="producto_nombre">Flautas</h2>
-                            <p class="descripcion_producto">Con crema y bañadas con salsa de aguacate. Orden de 5 piezas.</p>
-                        </div>
-                        <p class="precio_producto">Precio: $238.00</p>
-                    </div>
-                    <section class="modal modal-item" data-item="1">
-                        <div class="modal__container">
-                            <h2 class="modal__title">Nombre</h2>
-                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
-                                quas,
-                                culpa tempora. Veniam consectetur deleniti maxime.
-                            </p>
-                            <form id="pedidoForm">
-                                <div class="form-group opciones_papas">
-                                    <label for="pedidoForm">¿Desea Extra?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="papas" value="sin_Extra"> Sin Extra ($0)</li>
-                                        <li><input type="radio" name="papas" value="con_crema"> Extra de Crema ($18)</li>
-                                        <li><input type="radio" name="papas" value="con_aguacate"> Extra de Salsa de Aguacate ($18)</li>
-                                    </ol>
-                                </div>
-                                <div class="form-group">
-                                    <label for="form-group">¿Desea Bebida?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca cola sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
-                                    </ol>
-                                </div>
-                            </form>
-                            <div id="resultado">
-                                <h3>Precio: $<span id="total">0.00</span></h3>
-                            </div>
-                            <div class="modal__button-container">
-                                <button class="modal__close">Cancelar</button>
-                                <button class="button_cantidad menos">-</button>
-                                <span id="cantidad">1</span>
-                                <button class="button_cantidad mas">+</button>
-                                <button class="modal__add" id="agregarAlCarrito">Agregar</button>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="contenedor_producto producto" data-item="2"> <!-- Enchiladas -->
-                        <img class="imagen_producto" src="../Imagenes/enchiladas.jpeg" alt="enchiladas">
-                        <div class="producto_info">
-                            <h2 class="producto_nombre">Enchiladas</h2>
-                            <p class="descripcion_producto"> Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas.</p>
-                        </div>
-                        <p class="precio_producto">Precio: $194.00</p>
-                    </div>
-                    <section class="modal modal-item" data-item="2">
-                        <div class="modal__container">
-                            <h2 class="modal__title">Nombre</h2>
-                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
-                                quas,
-                                culpa tempora. Veniam consectetur deleniti maxime.
-                            </p>
-                            <form id="pedidoForm">
-                                <div class="form-group opciones_papas">
-                                    <label for="form-group opciones_papas">¿Desea Cebolla en sus Enchiladas?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="papas" value="Cebolla"> Con Cebolla</li>
-                                        <li><input type="radio" name="papas" value="Sin_Cebolla"> Sin Cebolla</li>
-                                    </ol>
-                                </div>
-                                <div class="form-group">
-                                    <label for="form-group">¿Desea Bebida?</label>
-                                    <ol class="opciones">
-                                        <li><input type="radio" name="bebida" value="sin_bebida"> Sin Bebida ($0)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola"> Coca-Cola ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-Cola-Light"> Coca-Cola Light ($48)</li>
-                                        <li><input type="radio" name="bebida" value="Coca-cola-sin-azucar"> Coca-Cola Sin-Azúcar ($48)</li>
-                                    </ol>
-                                </div>
-                            </form>
-                            <div id="resultado">
-                                <h3>Precio: $<span id="total">0.00</span></h3>
-                            </div>
-                            <div class="modal__button-container">
-                                <button class="modal__close">Cancelar</button>
-                                <button class="button_cantidad menos">-</button>
-                                <span id="cantidad">1</span>
-                                <button class="button_cantidad mas">+</button>
-                                <button class="modal__add" id="agregarAlCarrito">Agregar</button>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-            </div>
+                </div>
+            <?php endif; ?>
             <div class="contenedor_seccion">
                 <section class="Entradas" id="Entradas">
                     <h1>Entradas</h1>

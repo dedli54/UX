@@ -48,58 +48,58 @@ INSERT INTO `tablaproductos` (
 VALUES (
     'Cueritos en Vinagre',
     'Deliciosa combinación de tiras finas de piel de cerdo y zanahorias encurtidas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/Cueritos.jpeg',
+    '../Imagenes/Cueritos.jpeg',
     56.00,
-    'Entrada'
+    'Entradas'
   ),
   (
     'Frijoles Refritos con Queso',
     'Frijoles refritos, acompañados de queso y servidos con totopos crujientes.',
-    'D:/XAMPP/htdocs/UX/Imagenes/Frijole.jpeg',
+    '../Imagenes/Frijole.jpeg',
     56.00,
-    'Entrada'
+    'Entradas'
   ),
   (
     'Papitas Doradas',
     'Riquísimas con salsa de aguacate.',
-    'D:/XAMPP/htdocs/UX/Imagenes/papadorada.jpeg',
+    '../Imagenes/papadorada.jpeg',
     56.00,
-    'Entrada'
+    'Entradas'
   ),
   (
     'Orden de Sopes',
     'Elige entre deshebrada, picadillo con papa, chicharrón verde y chicharrón rojo. Orden de 3 piezas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/sopes.jpeg',
+    '../Imagenes/sopes.jpeg',
     183.00,
-    'Platillo'
+    'Platillos'
   ),
   (
     'Flautas',
     'Con crema y bañadas con salsa de aguacate. Orden de 5 piezas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/Flautas.jpeg',
+    '../Imagenes/Flautas.jpeg',
     238.00,
-    'Platillo'
+    'Platillos'
   ),
   (
     'Enchiladas',
     'Las tradicionales, servidas con o sin cebolla. Orden de 5 piezas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/enchiladas.jpeg',
+    '../Imagenes/enchiladas.jpeg',
     194.00,
-    'Platillo'
+    'Platillos'
   ),
   (
     'Rey de la Juárez',
     'Platillo surtido 8 piezas. Incluye 2 Enchiladas, 2 Flautas, 2 Tacos y 2 Tostadas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/rey.jpeg',
+    '../Imagenes/rey.jpeg',
     370.00,
-    'Combo'
+    'Combos'
   ),
   (
     'Platillo',
     '2 Enchiladas, 2 Tacos y 2 Flautas.',
-    'D:/XAMPP/htdocs/UX/Imagenes/plato.jpeg',
+    '../Imagenes/plato.jpeg',
     255.00,
-    'Combo'
+    'Combos'
   );
 SELECT *
 FROM tablaproductos;
@@ -129,22 +129,27 @@ CREATE TABLE `taqueriajuarezdb`.`tabladetallepedido` (
 ) ENGINE = InnoDB COMMENT = 'TABLA CON EL DETALLE DE LOS PEDIDOS REALIZADOS DE LA PAGINA DE LA TAQUERIA';
 SELECT *
 FROM tabladetallepedido;
-CREATE VIEW v_productos_mas_pedidos AS
-SELECT tablaproductos.id_producto,
-  tablaproductos.nombre_producto AS nombre_producto,
-  tablaproductos.imagen_producto,
-  tablaproductos.descripcion_producto,
-  tablaproductos.categoria_producto,
-  tablaproductos.precio_producto,
-  SUM(tabladetallepedido.cantidad_detallepedido) AS total_pedidos
-FROM tablaproductos
-  JOIN tabladetallepedido ON tablaproductos.id_producto = tabladetallepedido.id_pedido_detallepedido
-GROUP BY tablaproductos.id_producto,
-  tablaproductos.nombre_producto,
-  tablaproductos.categoria_producto
-ORDER BY total_pedido DESC
-LIMIT 3;
+CREATE VIEW vista_pedido_productos AS
+SELECT p.correo_usuario_pedido AS correo_electronico,
+  pr.id_producto AS id_producto,
+  pr.nombre_producto AS nombre_producto,
+  SUM(d.cantidad_detallepedido) AS cantidad_total
+FROM tabladetallepedido d
+  INNER JOIN tablapedidos pe ON d.id_pedido_detallepedido = pe.id_pedido
+  INNER JOIN tablaproductos pr ON d.id_producto_detallepedido = pr.id_producto
+  INNER JOIN tablapedidos p ON pe.id_pedido = p.id_pedido
+GROUP BY p.correo_usuario_pedido,
+  pr.nombre_producto;
 SELECT *
-FROM v_productos_mas_pedidos;
+FROM vista_pedido_productos;
 SELECT *
-FROM v_productos_mas_pedidos;
+FROM vista_pedido_productos
+ORDER BY cantidad_total DESC
+LIMIT 1;
+SELECT *
+FROM vista_pedido_productos;
+SELECT *
+FROM vista_pedido_productos
+WHERE correo_electronico = 'mmd.-@hotmail.com'
+ORDER BY cantidad_total DESC
+LIMIT 1;

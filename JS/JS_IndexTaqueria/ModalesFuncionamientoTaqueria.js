@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const listaItems = document.querySelector("#carrito_lista");
 
     // Recorrer cada item en el carrito y construir la interfaz
-    if (carrito.length !== 0) {
+    if (carrito !== null) {
       carrito.forEach((item, index) => {
         if (carrito.length - 1 != index) {
           // Crear un nuevo div para el item
@@ -88,14 +88,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Obtener el último elemento del carrito (que contiene el subtotal)
-    const Total = carrito[carrito.length - 1].CarritoTotal;
+    if (carrito !== null) {
+      // Obtener el último elemento del carrito (que contiene el subtotal)
+      const Total = carrito[carrito.length - 1].CarritoTotal;
+      // Actualizar el texto del subtotal en el HTML
+      const totalElement = document.querySelector("#totalCarrito span");
+      totalElement.textContent = `${Total}`;
+    }
 
-    // Actualizar el texto del subtotal en el HTML
-    const totalElement = document.querySelector("#totalCarrito span");
-    totalElement.textContent = `${Total}`;
   }
   actualizarTotalCarrito();
+  mostrarMisMasPedidos();
 });
 
 // Función para construir el objeto con la información del carrito
